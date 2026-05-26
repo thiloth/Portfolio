@@ -149,6 +149,7 @@ export const certifications = [
     color: 'from-indigo-500 to-violet-500',
     icon: 'badge',
     badge: 'Global',
+    pdf: './SAP backend abap.pdf',
   },
   {
     title: 'SAP Certified — Positioning SAP Business AI Solutions as Part of SAP Business Suite',
@@ -156,6 +157,7 @@ export const certifications = [
     color: 'from-fuchsia-500 to-pink-500',
     icon: 'sparkles',
     badge: 'Global',
+    pdf: './SAP Business Suite.pdf',
   },
   {
     title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',
@@ -303,7 +305,6 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
-  { label: 'Metrics', href: '#metrics' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },

@@ -49,9 +49,9 @@ export default function Navbar() {
           className="group flex items-center gap-2"
           onClick={() => setOpen(false)}
         >
-          <span className="relative grid size-9 place-items-center rounded-xl bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 font-display text-sm font-bold text-white shadow-glow">
+          <span className="relative grid size-9 place-items-center rounded-xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 font-display text-sm font-bold text-white shadow-[0_0_30px_rgba(59,130,246,0.45)]">
             TS
-            <span className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-cyan-400/40 to-fuchsia-500/40 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
+            <span className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-blue-500/40 to-cyan-400/40 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
           </span>
           <div className="hidden flex-col leading-tight sm:flex">
             <span className="font-display text-sm font-bold text-white">{profile.shortName} B Shetty</span>

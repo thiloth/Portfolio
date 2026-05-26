@@ -29,7 +29,7 @@ export default function LoadingScreen() {
               initial={{ scale: 0.85, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="relative grid size-20 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 font-display text-2xl font-bold text-white shadow-glow"
+              className="relative grid size-20 place-items-center rounded-2xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 font-display text-2xl font-bold text-white shadow-[0_0_40px_rgba(59,130,246,0.55)]"
             >
               TS
               <motion.span
@@ -54,7 +54,7 @@ export default function LoadingScreen() {
                 initial={{ x: '-100%' }}
                 animate={{ x: '100%' }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
-                className="h-full w-full bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
+                className="h-full w-full bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-400"
               />
             </div>
           </div>

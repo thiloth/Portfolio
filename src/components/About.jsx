@@ -32,15 +32,11 @@ export default function About() {
               <h3 className="font-display text-xl font-semibold text-white">Who I am</h3>
             </div>
 
-            <p className="mt-5 text-slate-300">
+            <p className="mt-5 leading-relaxed text-slate-300">
               SAP ABAP Developer with hands-on experience in enterprise{' '}
-              <span className="inline-flex translate-y-0.5 items-center align-middle">
-                <SAPLogo size={16} className="mx-1" />
-              </span>
+              <SAPLogo size={14} className="mx-1 align-[-3px]" />
               backend development at{' '}
-              <span className="inline-flex translate-y-1 items-center align-middle">
-                <IBMLogo size={14} className="mx-1" />
-              </span>
+              <IBMLogo size={12} className="mx-1 align-[-1px]" />
               <span className="font-semibold text-white">India Pvt. Ltd.</span> Skilled in
               developing custom reports, Smart Forms, enhancements, debugging, integrations, and
               scalable SAP applications.

@@ -16,48 +16,35 @@ export function IBMLogo({ size = 28, className = '' }) {
   );
 }
 
-// Drop public/SAPlogo.png any time — it'll override the inline mark below.
-import { useState } from 'react';
-
 export function SAPLogo({ size = 28, className = '' }) {
-  const [errored, setErrored] = useState(false);
-
-  if (!errored) {
-    return (
-      <img
-        src="./SAPlogo.png"
-        alt="SAP"
-        height={size}
-        style={{ height: size, width: 'auto' }}
-        onError={() => setErrored(true)}
-        className={`inline-block select-none ${className}`}
-        draggable={false}
-      />
-    );
-  }
-
-  // Fallback: clean flat SAP wordmark — solid SAP brand blue, no gradient,
-  // no decorative shape. Drop /public/SAPlogo.png for the real mark.
+  // SAP wordmark on a blue gradient pill (original design).
+  const w = size * 2.2;
   const h = size;
-  const w = size * 1.9;
   return (
     <svg
       role="img"
       aria-label="SAP"
-      viewBox="0 0 76 40"
+      viewBox="0 0 88 40"
       width={w}
       height={h}
       className={`inline-block ${className}`}
     >
+      <defs>
+        <linearGradient id="sap-grad" x1="0" x2="1" y1="0" y2="1">
+          <stop offset="0" stopColor="#0FAAFF" />
+          <stop offset="1" stopColor="#003F8F" />
+        </linearGradient>
+      </defs>
+      <path d="M0 4 H72 L88 20 L72 36 H0 Z" fill="url(#sap-grad)" />
       <text
-        x="38"
-        y="31"
+        x="36"
+        y="27"
         textAnchor="middle"
-        fontFamily='"Helvetica Neue", "Arial Black", Arial, sans-serif'
+        fontFamily="Arial, Helvetica, sans-serif"
         fontWeight="900"
-        fontSize="30"
-        letterSpacing="-0.5"
-        fill="#0091DA"
+        fontSize="20"
+        letterSpacing="1"
+        fill="#ffffff"
       >
         SAP
       </text>
