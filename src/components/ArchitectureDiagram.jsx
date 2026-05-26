@@ -59,7 +59,7 @@ export default function ArchitectureDiagram() {
         <span className="chip border-cyan-400/30 text-cyan-200">Clean Core</span>
       </div>
 
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-2 sm:gap-3 lg:grid-cols-3">
         {layers.map((l, i) => (
           <motion.div
             key={l.title}
@@ -67,18 +67,24 @@ export default function ArchitectureDiagram() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.45, delay: i * 0.06 }}
-            className="group relative overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] p-4 transition hover:border-fuchsia-400/30 hover:bg-white/[0.05]"
+            className="group relative flex items-center gap-2.5 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] p-2.5 transition hover:border-sky-400/30 hover:bg-white/[0.05] sm:gap-3 sm:rounded-2xl sm:p-3.5"
           >
             <div
-              className={`pointer-events-none absolute -right-10 -top-10 size-28 rounded-full bg-gradient-to-br ${l.accent} opacity-20 blur-2xl transition-opacity duration-500 group-hover:opacity-40`}
+              className={`pointer-events-none absolute -right-10 -top-10 size-24 rounded-full bg-gradient-to-br ${l.accent} opacity-15 blur-2xl transition-opacity duration-500 group-hover:opacity-35 sm:size-28`}
             />
             <span
-              className={`grid size-10 place-items-center rounded-xl bg-gradient-to-br ${l.accent} shadow-glow`}
+              className={`grid size-8 shrink-0 place-items-center rounded-lg bg-gradient-to-br ${l.accent} shadow-[0_0_18px_rgba(56,189,248,0.25)] sm:size-9 sm:rounded-xl`}
             >
-              <l.Icon size={16} className="text-white" />
+              <l.Icon size={14} className="text-white" />
             </span>
-            <p className="mt-3 font-display text-sm font-semibold text-white">{l.title}</p>
-            <p className="mt-0.5 font-mono text-[11px] text-slate-400">{l.sub}</p>
+            <div className="min-w-0 flex-1">
+              <p className="truncate font-display text-[12px] font-semibold leading-tight text-white sm:text-sm">
+                {l.title}
+              </p>
+              <p className="mt-0.5 truncate font-mono text-[9px] leading-tight text-slate-400 sm:text-[11px]">
+                {l.sub}
+              </p>
+            </div>
           </motion.div>
         ))}
       </div>
