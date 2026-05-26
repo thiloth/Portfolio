@@ -1,20 +1,16 @@
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, ArrowUp, Phone } from 'lucide-react';
 import { profile } from '../data/portfolio';
+import Wordmark from './Wordmark';
 
 export default function Footer() {
   return (
     <footer className="relative mt-24 border-t border-white/5 bg-ink-950/80 backdrop-blur-xl">
       <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
       <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row sm:px-8">
-        <div className="flex items-center gap-3">
-          <span className="grid size-9 place-items-center rounded-xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 font-display text-sm font-bold text-white shadow-[0_0_30px_rgba(59,130,246,0.45)]">
-            TS
-          </span>
-          <div className="leading-tight">
-            <p className="font-display text-sm font-semibold text-white">Thiloth B Shetty</p>
-            <p className="text-xs text-slate-400">{profile.tagline}</p>
-          </div>
+        <div className="flex flex-col gap-2">
+          <Wordmark size="md" />
+          <p className="text-xs text-slate-400">{profile.tagline}</p>
         </div>
 
         <div className="flex items-center gap-3">

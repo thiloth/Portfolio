@@ -20,9 +20,9 @@ html {
 body {
   @apply bg-ink-950 text-slate-200 font-sans antialiased;
   background:
-    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(124, 58, 237, 0.16), transparent 60%),
-    radial-gradient(ellipse 60% 60% at 100% 50%, rgba(29, 107, 255, 0.12), transparent 60%),
-    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(34, 211, 238, 0.08), transparent 60%),
+    radial-gradient(ellipse 80% 60% at 50% -10%, rgba(29, 107, 255, 0.14), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 100% 50%, rgba(34, 211, 238, 0.08), transparent 60%),
+    radial-gradient(ellipse 60% 60% at 0% 100%, rgba(56, 189, 248, 0.07), transparent 60%),
     #04050d;
   min-height: 100vh;
   overflow-x: hidden;
@@ -38,11 +38,6 @@ section.bg-navy-band {
     linear-gradient(180deg, transparent, rgba(7, 11, 28, 0.8), transparent);
 }
 
-::selection {
-  background: rgba(168, 85, 247, 0.35);
-  color: #fff;
-}
-
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
@@ -52,8 +47,13 @@ section.bg-navy-band {
   background: #05060f;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #6366f1, #a855f7);
+  background: linear-gradient(180deg, #1d6bff, #38bdf8);
   border-radius: 999px;
+}
+
+::selection {
+  background: rgba(56, 189, 248, 0.35);
+  color: #fff;
 }
 
 @layer components {
@@ -84,7 +84,7 @@ section.bg-navy-band {
   }
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(120deg, #22d3ee 0%, #818cf8 40%, #c084fc 70%, #f0abfc 100%);
+    background-image: linear-gradient(120deg, #ffffff 0%, #7dd3fc 50%, #38bdf8 100%);
     background-size: 200% 200%;
   }
   .btn {
@@ -92,14 +92,14 @@ section.bg-navy-band {
   }
   .btn-primary {
     @apply btn text-white;
-    background-image: linear-gradient(120deg, #6366f1, #a855f7, #22d3ee);
+    background-image: linear-gradient(120deg, #1e3a8a, #1d6bff, #38bdf8);
     background-size: 200% 200%;
-    box-shadow: 0 10px 40px -10px rgba(168, 85, 247, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 40px -10px rgba(29, 107, 255, 0.55), inset 0 0 0 1px rgba(255, 255, 255, 0.1);
   }
   .btn-primary:hover {
     transform: translateY(-2px);
     background-position: 100% 50%;
-    box-shadow: 0 20px 50px -10px rgba(168, 85, 247, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 50px -10px rgba(56, 189, 248, 0.7), inset 0 0 0 1px rgba(255, 255, 255, 0.2);
   }
   .btn-ghost {
     @apply btn text-slate-200 border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/10;
@@ -127,11 +127,11 @@ section.bg-navy-band {
 .cursor-glow {
   position: fixed;
   pointer-events: none;
-  width: 360px;
-  height: 360px;
+  width: 320px;
+  height: 320px;
   border-radius: 9999px;
-  background: radial-gradient(circle, rgba(139, 92, 246, 0.18), transparent 60%);
-  filter: blur(20px);
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.16), transparent 60%);
+  filter: blur(22px);
   z-index: 1;
   transform: translate(-50%, -50%);
   transition: transform 80ms linear;

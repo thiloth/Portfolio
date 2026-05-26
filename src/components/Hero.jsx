@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowDown, Download, Github, Linkedin, Mail, MapPin, Sparkles } from 'lucide-react';
+import { ArrowDown, Download, Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import { profile } from '../data/portfolio';
 import Particles from './Particles';
 import Typing from './Typing';
@@ -12,10 +12,10 @@ export default function Hero() {
   return (
     <section id="home" className="relative isolate flex min-h-[100svh] items-center overflow-hidden pt-28">
       <div className="absolute inset-0 -z-10 grid-bg" />
-      <div className="absolute inset-0 -z-10 bg-grid-glow opacity-80" />
-      <div className="absolute -left-32 top-24 -z-10 h-72 w-72 rounded-full bg-fuchsia-500/20 blur-[120px]" />
-      <div className="absolute -right-32 bottom-24 -z-10 h-80 w-80 rounded-full bg-cyan-500/20 blur-[120px]" />
-      <Particles count={32} />
+      <div className="absolute inset-0 -z-10 bg-grid-glow opacity-60" />
+      <div className="absolute -left-32 top-24 -z-10 h-72 w-72 rounded-full bg-blue-600/15 blur-[120px]" />
+      <div className="absolute -right-32 bottom-24 -z-10 h-80 w-80 rounded-full bg-sky-500/15 blur-[120px]" />
+      <Particles count={18} />
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-7">
@@ -39,43 +39,48 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.05 }}
-            className="mt-5 font-display text-[clamp(2.4rem,6vw,4.6rem)] font-extrabold leading-[1.05] tracking-tight text-white"
+            className="mt-5 font-display text-[clamp(2.4rem,6vw,4.6rem)] font-bold leading-[1.05] tracking-tight text-white"
           >
-            <span className="block">Hi, I&apos;m</span>
-            <span className="gradient-text animate-gradient bg-[length:200%_200%]">
-              Thiloth B Shetty
-            </span>
+            THILOTH B SHETTY
           </motion.h1>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-4 flex items-center gap-2 text-lg sm:text-xl"
+            transition={{ duration: 0.7, delay: 0.15 }}
+            className="mt-3 flex items-center gap-3"
           >
-            <Sparkles size={18} className="text-cyan-300" />
-            <span className="text-slate-300">I&apos;m a </span>
+            <span className="h-px w-8 bg-sky-400 shadow-[0_0_8px_rgba(56,189,248,0.7)]" />
+            <span className="font-display text-base font-medium text-slate-300 sm:text-lg">
+              SAP ABAP Developer at <span className="text-white">IBM</span>
+            </span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="mt-6 flex items-center gap-2 text-base text-slate-400 sm:text-lg"
+          >
             <Typing
               words={profile.typingRoles}
-              className="font-display font-semibold text-white"
+              className="font-mono text-sky-300"
             />
           </motion.div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.25 }}
+            transition={{ duration: 0.7, delay: 0.32 }}
             className="mt-5 max-w-2xl font-display text-lg font-medium leading-snug text-white/90 sm:text-xl"
           >
-            <span className="gradient-text animate-gradient bg-[length:200%_200%]">
-              {profile.tagline}.
-            </span>
+            {profile.tagline}
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.35 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg"
           >
             {profile.intro}

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { navLinks, profile } from '../data/portfolio';
+import Wordmark from './Wordmark';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -46,19 +47,14 @@ export default function Navbar() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 sm:px-8">
         <a
           href="#home"
-          className="group flex items-center gap-2"
+          className="group flex items-center gap-3"
           onClick={() => setOpen(false)}
         >
-          <span className="relative grid size-9 place-items-center rounded-xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 font-display text-sm font-bold text-white shadow-[0_0_30px_rgba(59,130,246,0.45)]">
-            TS
-            <span className="absolute -inset-1 rounded-2xl bg-gradient-to-br from-blue-500/40 to-cyan-400/40 opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-100" />
+          <Wordmark size="md" />
+          <span className="hidden h-6 w-px bg-white/10 sm:block" />
+          <span className="hidden text-[10px] font-medium uppercase tracking-[0.25em] text-slate-400 sm:block">
+            SAP ABAP · IBM
           </span>
-          <div className="hidden flex-col leading-tight sm:flex">
-            <span className="font-display text-sm font-bold text-white">{profile.shortName} B Shetty</span>
-            <span className="text-[10px] font-medium uppercase tracking-[0.2em] text-slate-400">
-              SAP ABAP · IBM
-            </span>
-          </div>
         </a>
 
         <ul className="hidden items-center gap-1 lg:flex">
@@ -69,18 +65,24 @@ export default function Navbar() {
               <li key={l.href}>
                 <a
                   href={l.href}
-                  className={`relative rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                  className={`group relative px-3 py-2 text-sm font-medium transition-colors ${
                     isActive ? 'text-white' : 'text-slate-400 hover:text-white'
                   }`}
                 >
+                  {l.label}
                   {isActive && (
                     <motion.span
-                      layoutId="nav-active"
-                      className="absolute inset-0 -z-10 rounded-full bg-white/10 ring-1 ring-white/15"
+                      layoutId="nav-active-underline"
+                      className="absolute inset-x-3 -bottom-0.5 h-px bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.7)]"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
-                  {l.label}
+                  <span
+                    aria-hidden
+                    className={`absolute inset-x-3 -bottom-0.5 h-px origin-left scale-x-0 bg-white/30 transition-transform duration-300 group-hover:scale-x-100 ${
+                      isActive ? 'opacity-0' : ''
+                    }`}
+                  />
                 </a>
               </li>
             );

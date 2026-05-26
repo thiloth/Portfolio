@@ -4,9 +4,9 @@ export const profile = {
   role: 'SAP ABAP Developer',
   company: 'IBM India Pvt. Ltd.',
   title: 'SAP ABAP Developer | ABAP Cloud Certified | SAP Backend Developer',
-  tagline: 'Designing Enterprise SAP Solutions with Clean Backend Engineering',
+  tagline: 'Building scalable enterprise SAP backend solutions with performance-focused engineering.',
   intro:
-    'SAP ABAP Developer at IBM with hands-on experience in enterprise SAP backend development including OData services, ALV reports, Module Pool programming, IDoc integrations, CDS Views, AMDP, performance optimization, Smart Forms, and custom SAP enhancements. Passionate about scalable backend architecture, SAP integrations, debugging complex business scenarios, and exploring modern web technologies.',
+    'SAP ABAP Developer at IBM. I work on OData services, CDS Views, AMDP, IDoc integrations, Module Pool programs, ALV reports, Smart Forms, and custom enhancements that ship inside real enterprise systems. Comfortable in the debugger, deliberate about performance, and curious about modern web stacks.',
   startDate: 'February 12, 2024',
   email: 'thilothb@gmail.com',
   phone: '+91 94460 15365',

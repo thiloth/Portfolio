@@ -7,10 +7,10 @@ export default function Particles({ count = 28 }) {
       id: i,
       left: Math.random() * 100,
       top: Math.random() * 100,
-      size: 2 + Math.random() * 5,
-      duration: 8 + Math.random() * 12,
+      size: 1.5 + Math.random() * 3.5,
+      duration: 10 + Math.random() * 12,
       delay: Math.random() * 6,
-      hue: Math.random() > 0.5 ? 'rgba(168,85,247,0.55)' : 'rgba(34,211,238,0.55)',
+      hue: Math.random() > 0.4 ? 'rgba(56,189,248,0.5)' : 'rgba(125,211,252,0.55)',
     }));
   }, [count]);
 

@@ -36,7 +36,7 @@ export default {
       },
       backgroundImage: {
         'grid-glow':
-          'radial-gradient(circle at 30% 20%, rgba(99,102,241,0.15), transparent 40%), radial-gradient(circle at 80% 80%, rgba(168,85,247,0.18), transparent 40%)',
+          'radial-gradient(circle at 30% 20%, rgba(29,107,255,0.18), transparent 40%), radial-gradient(circle at 80% 80%, rgba(56,189,248,0.14), transparent 40%)',
         'noise':
           "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E\")",
       },

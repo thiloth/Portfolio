@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
+import Wordmark from './Wordmark';
 
 export default function LoadingScreen() {
   const [done, setDone] = useState(false);
@@ -20,44 +21,30 @@ export default function LoadingScreen() {
           transition={{ duration: 0.6, ease: 'easeInOut' }}
           className="fixed inset-0 z-[100] grid place-items-center bg-ink-950"
         >
-          <div className="absolute inset-0 grid-bg opacity-50" />
-          <div className="absolute -left-32 top-24 h-72 w-72 rounded-full bg-fuchsia-500/20 blur-[120px]" />
-          <div className="absolute -right-32 bottom-24 h-80 w-80 rounded-full bg-cyan-500/20 blur-[120px]" />
+          <div className="absolute inset-0 grid-bg opacity-40" />
+          <div className="absolute left-1/2 top-1/3 -translate-x-1/2 h-72 w-72 rounded-full bg-sky-500/10 blur-[120px]" />
 
-          <div className="relative flex flex-col items-center gap-6">
-            <motion.div
-              initial={{ scale: 0.85, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 0.5, ease: 'easeOut' }}
-              className="relative grid size-20 place-items-center rounded-2xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 font-display text-2xl font-bold text-white shadow-[0_0_40px_rgba(59,130,246,0.55)]"
-            >
-              TS
-              <motion.span
-                aria-hidden
-                animate={{ rotate: 360 }}
-                transition={{ duration: 1.4, repeat: Infinity, ease: 'linear' }}
-                className="absolute -inset-3 rounded-3xl border border-white/15 border-t-cyan-300"
-              />
-            </motion.div>
+          <motion.div
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: 'easeOut' }}
+            className="relative flex flex-col items-center gap-6"
+          >
+            <Wordmark size="lg" />
 
-            <div className="text-center">
-              <p className="font-display text-sm font-semibold tracking-[0.3em] text-white">
-                THILOTH B SHETTY
-              </p>
-              <p className="mt-1 text-[10px] uppercase tracking-[0.4em] text-slate-500">
-                Initializing Enterprise Workspace
-              </p>
-            </div>
+            <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-slate-500">
+              SAP ABAP Developer · IBM
+            </p>
 
             <div className="relative h-[2px] w-48 overflow-hidden rounded-full bg-white/10">
               <motion.div
                 initial={{ x: '-100%' }}
                 animate={{ x: '100%' }}
                 transition={{ duration: 1, ease: 'easeInOut' }}
-                className="h-full w-full bg-gradient-to-r from-blue-700 via-sky-500 to-cyan-400"
+                className="h-full w-full bg-sky-400 shadow-[0_0_10px_rgba(56,189,248,0.7)]"
               />
             </div>
-          </div>
+          </motion.div>
         </motion.div>
       )}
     </AnimatePresence>
