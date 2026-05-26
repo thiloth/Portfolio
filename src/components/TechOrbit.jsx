@@ -30,7 +30,7 @@ const rings = [
 
 export default function TechOrbit() {
   return (
-    <div className="glass relative aspect-square w-full overflow-hidden rounded-3xl">
+    <div className="glass relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-3xl sm:max-w-none">
       <div className="absolute inset-0 bg-grid-glow opacity-70" />
       <div className="absolute inset-0 grid-bg opacity-30" />
 

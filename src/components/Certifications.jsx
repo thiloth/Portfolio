@@ -63,7 +63,7 @@ export default function Certifications() {
         </div>
       </motion.div>
 
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
         {certifications.map((c, i) => {
           const Icon = iconMap[c.icon] || BadgeCheck;
           return (
@@ -73,36 +73,37 @@ export default function Certifications() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.3 }}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
-                className="glass group relative h-full overflow-hidden rounded-3xl p-6 transition hover:shadow-glow"
+                className="glass group relative h-full overflow-hidden rounded-2xl p-3.5 transition hover:shadow-glow sm:rounded-3xl sm:p-6"
               >
                 <div
-                  className={`pointer-events-none absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-br ${c.color} opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-40`}
+                  className={`pointer-events-none absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-br ${c.color} opacity-0 blur-2xl transition-opacity duration-500 group-hover:opacity-30`}
                 />
-                <div className="flex items-start justify-between gap-4">
+                <div className="flex items-start justify-between gap-2 sm:gap-4">
                   <span
-                    className={`grid size-12 place-items-center rounded-2xl bg-gradient-to-br ${c.color} shadow-glow`}
+                    className={`grid size-9 place-items-center rounded-xl bg-gradient-to-br ${c.color} shadow-glow sm:size-12 sm:rounded-2xl`}
                   >
-                    <Icon size={20} className="text-white" />
+                    <Icon size={14} className="text-white sm:hidden" />
+                    <Icon size={20} className="hidden text-white sm:block" />
                   </span>
                   {c.badge && (
-                    <span className="chip border-fuchsia-400/30 text-fuchsia-200">
-                      <Sparkles size={12} /> {c.badge}
+                    <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-400/30 bg-white/[0.04] px-2 py-0.5 text-[9px] font-medium text-fuchsia-200 sm:px-3 sm:py-1.5 sm:text-xs">
+                      <Sparkles size={10} /> {c.badge}
                     </span>
                   )}
                 </div>
-                <h3 className="mt-5 font-display text-base font-semibold text-white sm:text-lg">
+                <h3 className="mt-3 font-display text-[13px] font-semibold leading-snug text-white sm:mt-5 sm:text-lg">
                   {c.title}
                 </h3>
-                <p className="mt-1.5 text-sm text-slate-400">{c.issuer}</p>
+                <p className="mt-1 text-[11px] text-slate-400 sm:mt-1.5 sm:text-sm">{c.issuer}</p>
                 {c.pdf && (
                   <a
                     href={c.pdf}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex items-center gap-1.5 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-3 py-1.5 text-xs font-semibold text-cyan-200 transition hover:border-cyan-400/60 hover:bg-cyan-400/20 hover:text-white"
+                    className="mt-3 inline-flex items-center gap-1 rounded-full border border-cyan-400/40 bg-cyan-400/10 px-2.5 py-1 text-[10px] font-semibold text-cyan-200 transition hover:border-cyan-400/60 hover:bg-cyan-400/20 hover:text-white sm:mt-4 sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"
                   >
-                    <FileText size={12} /> View Certificate
-                    <ExternalLink size={11} />
+                    <FileText size={11} /> View
+                    <ExternalLink size={10} />
                   </a>
                 )}
               </motion.div>
@@ -117,7 +118,7 @@ export default function Certifications() {
           eyebrow="Achievements"
           title="Recognized for going above and beyond."
         />
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
           {achievements.map((a, i) => (
             <motion.div
               key={a.title}
@@ -125,22 +126,23 @@ export default function Certifications() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass group relative overflow-hidden rounded-3xl p-7 transition hover:-translate-y-1"
+              className="glass group relative overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 sm:rounded-3xl sm:p-7"
             >
-              <div className="absolute -right-12 -top-12 size-40 rounded-full bg-gradient-to-br from-amber-400/20 to-fuchsia-500/20 blur-2xl transition group-hover:opacity-100" />
-              <div className="flex items-center gap-3">
-                <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-amber-400/20 to-fuchsia-500/20 ring-1 ring-white/10">
-                  <Award size={20} className="text-amber-300" />
+              <div className="absolute -right-12 -top-12 size-40 rounded-full bg-gradient-to-br from-amber-400/20 to-sky-500/20 blur-2xl transition group-hover:opacity-100" />
+              <div className="flex items-center gap-2 sm:gap-3">
+                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400/20 to-sky-500/20 ring-1 ring-white/10 sm:size-12 sm:rounded-2xl">
+                  <Award size={14} className="text-amber-300 sm:hidden" />
+                  <Award size={20} className="hidden text-amber-300 sm:block" />
                 </span>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2">
-                    <p className="text-[11px] uppercase tracking-[0.22em] text-amber-300/80">{a.metric}</p>
-                    {a.title.toLowerCase().includes('ibm') && <IBMLogo size={14} />}
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <p className="text-[9px] uppercase tracking-[0.18em] text-amber-300/80 sm:text-[11px] sm:tracking-[0.22em]">{a.metric}</p>
+                    {a.title.toLowerCase().includes('ibm') && <IBMLogo size={12} />}
                   </div>
-                  <h3 className="font-display text-lg font-semibold text-white">{a.title}</h3>
+                  <h3 className="font-display text-[13px] font-semibold leading-tight text-white sm:text-lg">{a.title}</h3>
                 </div>
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-slate-300">{a.description}</p>
+              <p className="mt-3 line-clamp-3 text-[11px] leading-relaxed text-slate-300 sm:mt-4 sm:line-clamp-none sm:text-sm">{a.description}</p>
             </motion.div>
           ))}
         </div>

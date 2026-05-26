@@ -84,7 +84,7 @@ export default function About() {
           </div>
         </TiltCard>
 
-        <div className="grid gap-5 lg:col-span-5">
+        <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:col-span-5 lg:grid-cols-1 lg:gap-5">
           {stats.map((s, i) => (
             <motion.div
               key={s.label}
@@ -92,15 +92,15 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.4 }}
               transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="glass group relative overflow-hidden rounded-2xl p-5 transition hover:-translate-y-1 hover:border-fuchsia-400/40"
+              className="glass group relative overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 hover:border-sky-400/40 sm:p-5"
             >
-              <div className="absolute inset-x-0 -top-20 h-40 bg-gradient-to-b from-fuchsia-500/10 to-transparent opacity-0 transition group-hover:opacity-100" />
-              <p className="font-display text-2xl font-bold text-white sm:text-3xl">
-                <span className="bg-gradient-to-r from-cyan-300 via-indigo-300 to-fuchsia-300 bg-clip-text text-transparent">
+              <div className="absolute inset-x-0 -top-20 h-40 bg-gradient-to-b from-sky-500/10 to-transparent opacity-0 transition group-hover:opacity-100" />
+              <p className="font-display text-xl font-bold text-white sm:text-2xl lg:text-3xl">
+                <span className="bg-gradient-to-r from-sky-300 to-cyan-300 bg-clip-text text-transparent">
                   {s.value}
                 </span>
               </p>
-              <p className="mt-1 text-sm text-slate-400">{s.label}</p>
+              <p className="mt-1 text-xs text-slate-400 sm:text-sm">{s.label}</p>
             </motion.div>
           ))}
 
@@ -109,9 +109,9 @@ export default function About() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="glass rounded-2xl p-5"
+            className="glass col-span-2 rounded-2xl p-4 sm:p-5 lg:col-span-1"
           >
-            <p className="text-sm text-slate-400">Currently engineering at</p>
+            <p className="text-xs text-slate-400 sm:text-sm">Currently engineering at</p>
             <div className="mt-2 flex items-center gap-3">
               <IBMLogo size={20} />
               <p className="font-display text-lg font-semibold text-white">India Pvt. Ltd.</p>

@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 export default function SectionHeading({ eyebrow, title, subtitle, align = 'center' }) {
   const alignClass = align === 'left' ? 'text-left' : 'text-center mx-auto';
   return (
-    <div className={`mb-14 max-w-3xl ${alignClass}`}>
+    <div className={`mb-8 max-w-3xl sm:mb-14 ${alignClass}`}>
       {eyebrow && (
         <motion.span
           initial={{ opacity: 0, y: 12 }}

@@ -20,7 +20,7 @@ export default function Skills() {
         subtitle="Deep SAP ABAP expertise, advanced SAP technologies, modern development tools, and a curiosity for full stack web."
       />
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+      <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6 xl:grid-cols-4">
         {skillGroups.map((g, gi) => {
           const Icon = iconMap[g.icon] || Code2;
           return (
@@ -28,32 +28,35 @@ export default function Skills() {
               key={g.title}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5, delay: gi * 0.1 }}
-              className="glass group relative overflow-hidden rounded-3xl p-6 transition hover:-translate-y-1 hover:shadow-glow"
+              className="glass group relative overflow-hidden rounded-2xl p-3.5 transition hover:-translate-y-1 hover:shadow-glow sm:rounded-3xl sm:p-6"
             >
               <div
-                className={`absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br ${g.accent} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-30`}
+                className={`absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br ${g.accent} opacity-0 blur-xl transition-opacity duration-500 group-hover:opacity-25`}
               />
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-2 sm:gap-3">
                 <span
-                  className={`grid size-10 place-items-center rounded-xl bg-gradient-to-br ${g.accent} shadow-glow`}
+                  className={`grid size-8 place-items-center rounded-lg bg-gradient-to-br ${g.accent} shadow-glow sm:size-10 sm:rounded-xl`}
                 >
-                  <Icon size={18} className="text-white" />
+                  <Icon size={14} className="text-white sm:hidden" />
+                  <Icon size={18} className="hidden text-white sm:block" />
                 </span>
-                <h3 className="font-display text-lg font-semibold text-white">{g.title}</h3>
+                <h3 className="font-display text-[13px] font-semibold leading-tight text-white sm:text-lg">
+                  {g.title}
+                </h3>
               </div>
 
-              <ul className="mt-5 flex flex-wrap gap-2">
+              <ul className="mt-3 flex flex-wrap gap-1.5 sm:mt-5 sm:gap-2">
                 {g.items.map((s, i) => (
                   <motion.li
                     key={s}
                     initial={{ opacity: 0, scale: 0.9 }}
                     whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.3, delay: 0.05 * i }}
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ duration: 0.3, delay: 0.04 * i }}
                     whileHover={{ y: -2 }}
-                    className="cursor-default rounded-xl border border-white/10 bg-white/[0.04] px-3 py-1.5 text-sm text-slate-200 transition hover:border-fuchsia-400/40 hover:text-white hover:shadow-glow"
+                    className="cursor-default rounded-md border border-white/10 bg-white/[0.04] px-2 py-0.5 text-[10.5px] text-slate-200 transition hover:border-sky-400/40 hover:text-white sm:rounded-xl sm:px-3 sm:py-1.5 sm:text-sm"
                   >
                     {s}
                   </motion.li>

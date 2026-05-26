@@ -7,7 +7,7 @@ export default function ProfileImage() {
   const [errored, setErrored] = useState(false);
 
   return (
-    <div className="relative mx-auto aspect-square w-full max-w-[420px]">
+    <div className="relative mx-auto aspect-square w-full max-w-[260px] sm:max-w-[340px] lg:max-w-[420px]">
       {/* Rotating gradient ring */}
       <motion.div
         aria-hidden

@@ -108,7 +108,7 @@ section.bg-navy-band {
     @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-medium text-slate-300 backdrop-blur;
   }
   .section {
-    @apply relative mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 sm:py-28;
+    @apply relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-8 sm:py-24 lg:py-28;
   }
   .eyebrow {
     @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300 backdrop-blur;
