@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion';
-import { Briefcase, Building2, CheckCircle2, MapPin } from 'lucide-react';
+import { Briefcase, CheckCircle2, MapPin } from 'lucide-react';
 import { experience } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
+import { IBMLogo } from './Logos';
 
 export default function Experience() {
   return (
@@ -39,10 +40,14 @@ export default function Experience() {
                   <span>{exp.period}</span>
                 </div>
                 <h3 className="mt-2 font-display text-xl font-semibold text-white">{exp.role}</h3>
-                <p className="mt-1 flex items-center gap-2 text-sm text-slate-300">
-                  <Building2 size={14} className="text-fuchsia-300" />
-                  <span className="font-medium">{exp.company}</span>
-                </p>
+                <div
+                  className={`mt-2 flex items-center gap-2 text-sm text-slate-300 ${
+                    i % 2 === 0 ? 'sm:flex-row-reverse' : ''
+                  }`}
+                >
+                  <IBMLogo size={18} />
+                  <span className="font-medium">India Pvt. Ltd.</span>
+                </div>
                 <p className="mt-1 flex items-center gap-2 text-xs text-slate-400">
                   <MapPin size={12} /> {exp.location}
                 </p>

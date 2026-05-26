@@ -3,6 +3,8 @@ import { Award, Code2, Database, Layers, Rocket, Sparkles, Users, Zap } from 'lu
 import { profile, stats, strengths } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
 import TiltCard from './TiltCard';
+import ArchitectureDiagram from './ArchitectureDiagram';
+import { IBMLogo, SAPLogo } from './Logos';
 
 const strengthIcons = [Zap, Rocket, Sparkles, Users, Award];
 
@@ -29,8 +31,15 @@ export default function About() {
             </div>
 
             <p className="mt-5 text-slate-300">
-              SAP ABAP Developer with hands-on experience in enterprise SAP backend development at
-              <span className="font-semibold text-white"> IBM India Pvt. Ltd.</span> Skilled in
+              SAP ABAP Developer with hands-on experience in enterprise{' '}
+              <span className="inline-flex translate-y-0.5 items-center align-middle">
+                <SAPLogo size={16} className="mx-1" />
+              </span>
+              backend development at{' '}
+              <span className="inline-flex translate-y-1 items-center align-middle">
+                <IBMLogo size={14} className="mx-1" />
+              </span>
+              <span className="font-semibold text-white">India Pvt. Ltd.</span> Skilled in
               developing custom reports, Smart Forms, enhancements, debugging, integrations, and
               scalable SAP applications.
             </p>
@@ -105,10 +114,18 @@ export default function About() {
             className="glass rounded-2xl p-5"
           >
             <p className="text-sm text-slate-400">Currently engineering at</p>
-            <p className="mt-1 font-display text-lg font-semibold text-white">{profile.company}</p>
-            <p className="text-sm text-slate-400">Since {profile.startDate}</p>
+            <div className="mt-2 flex items-center gap-3">
+              <IBMLogo size={20} />
+              <p className="font-display text-lg font-semibold text-white">India Pvt. Ltd.</p>
+            </div>
+            <p className="mt-1 text-sm text-slate-400">Since {profile.startDate}</p>
           </motion.div>
         </div>
+      </div>
+
+      {/* Enterprise SAP architecture illustration */}
+      <div className="mt-12">
+        <ArchitectureDiagram />
       </div>
     </section>
   );

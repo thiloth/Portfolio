@@ -13,7 +13,7 @@ export default function Footer() {
           </span>
           <div className="leading-tight">
             <p className="font-display text-sm font-semibold text-white">Thiloth B Shetty</p>
-            <p className="text-xs text-slate-400">Engineering Scalable SAP Backend Solutions</p>
+            <p className="text-xs text-slate-400">{profile.tagline}</p>
           </div>
         </div>
 

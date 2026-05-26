@@ -10,16 +10,27 @@ export default {
       },
       colors: {
         ink: {
-          950: '#05060f',
-          900: '#080a18',
-          800: '#0c0f23',
-          700: '#11142e',
+          // Matte-black canvas with subtle navy undertone
+          950: '#04050d',
+          900: '#070a16',
+          800: '#0a0f22',
+          700: '#0f1530',
+        },
+        navy: {
+          // Deep enterprise navy — used for sections behind glass cards
+          950: '#040711',
+          900: '#070b1c',
+          800: '#0b1230',
+          700: '#111a44',
+          600: '#1a2560',
         },
         neon: {
+          // Electric blue + violet enterprise accents
           blue: '#3b82f6',
+          electric: '#1d6bff',
           cyan: '#22d3ee',
           purple: '#a855f7',
-          violet: '#8b5cf6',
+          violet: '#7c3aed',
           pink: '#ec4899',
         },
       },

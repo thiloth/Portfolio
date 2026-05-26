@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { CheckCircle2, Github, Linkedin, Loader2, Mail, MapPin, Phone, Send } from 'lucide-react';
 import { profile } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
+import { IBMLogo } from './Logos';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
@@ -66,10 +67,12 @@ export default function Contact() {
 
           <div className="mt-7 rounded-2xl border border-white/10 bg-white/[0.03] p-4">
             <p className="text-xs uppercase tracking-[0.2em] text-slate-400">Currently</p>
-            <p className="mt-1 text-sm font-semibold text-white">
-              SAP ABAP Developer @ <span className="gradient-text">IBM</span>
-            </p>
-            <p className="text-xs text-slate-400">Open to global SAP & backend opportunities.</p>
+            <div className="mt-2 flex items-center gap-2 text-sm font-semibold text-white">
+              <span>SAP ABAP Developer</span>
+              <span className="text-slate-500">@</span>
+              <IBMLogo size={18} />
+            </div>
+            <p className="mt-1 text-xs text-slate-400">Open to global SAP & backend opportunities.</p>
           </div>
         </motion.div>
 

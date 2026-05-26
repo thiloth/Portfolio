@@ -30,6 +30,7 @@ export default function Education() {
               <span className="chip">{e.period}</span>
             </div>
             <h3 className="mt-4 font-display text-lg font-semibold text-white">{e.school}</h3>
+            {e.location && <p className="mt-0.5 text-xs text-slate-500">{e.location}</p>}
             <p className="mt-1 text-sm text-slate-400">{e.degree}</p>
             <p className="mt-4 inline-flex items-center gap-2 rounded-xl border border-emerald-400/20 bg-emerald-400/10 px-3 py-1.5 text-sm font-semibold text-emerald-200">
               <Trophy size={14} /> {e.score}

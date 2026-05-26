@@ -4,9 +4,9 @@ export const profile = {
   role: 'SAP ABAP Developer',
   company: 'IBM India Pvt. Ltd.',
   title: 'SAP ABAP Developer | ABAP Cloud Certified | SAP Backend Developer',
-  tagline: 'Engineering Scalable SAP Backend Solutions',
+  tagline: 'Designing Enterprise SAP Solutions with Clean Backend Engineering',
   intro:
-    'Passionate SAP ABAP Developer specializing in enterprise SAP backend development, ABAP Cloud, custom SAP solutions, debugging, integrations, and scalable backend architectures. Currently working at IBM India Pvt. Ltd. delivering enterprise-grade SAP solutions.',
+    'Enterprise SAP backend engineer at IBM India Pvt. Ltd. — building reliable, scalable, and clean-core ABAP Cloud solutions. Specialized in custom reporting, Smart Forms, enhancements, debugging, and cross-system integrations that power mission-critical business processes.',
   startDate: 'February 12, 2024',
   email: 'thilothb@gmail.com',
   phone: '+91 94460 15365',
@@ -30,6 +30,36 @@ export const stats = [
   { label: 'Backend Specialist', value: 'ABAP Cloud' },
 ];
 
+// Animated counters for the dedicated Metrics section
+export const metrics = [
+  {
+    label: 'Enterprise SAP Solutions Delivered',
+    value: 20,
+    suffix: '+',
+    accent: 'from-cyan-400 to-indigo-500',
+  },
+  {
+    label: 'SAP Global Certifications',
+    value: 2,
+    suffix: '',
+    accent: 'from-indigo-500 to-fuchsia-500',
+  },
+  {
+    label: 'Months at IBM',
+    // Auto-updates from start date so the number is always current.
+    dynamic: 'monthsAtIBM',
+    suffix: '+',
+    accent: 'from-fuchsia-500 to-pink-500',
+  },
+  {
+    label: 'Backend Domains',
+    value: 8,
+    suffix: '',
+    suffixLabel: 'ABAP · CDS · OData · RFC',
+    accent: 'from-emerald-400 to-teal-500',
+  },
+];
+
 export const skillGroups = [
   {
     title: 'SAP Skills',
@@ -44,9 +74,12 @@ export const skillGroups = [
       'Adobe Forms',
       'User Exits',
       'Customer Exits',
+      'BAdIs / Enhancements',
       'RFC Integrations',
+      'BAPI',
       'Debugging',
       'Open SQL',
+      'Performance Tuning',
     ],
   },
   {
@@ -78,7 +111,7 @@ export const experience = [
     bullets: [
       'Developed custom ALV and Classical reports for enterprise SAP modules.',
       'Created Smart Forms and Adobe Forms for business document automation.',
-      'Worked on User Exits, Customer Exits, and standard SAP enhancements.',
+      'Worked on User Exits, Customer Exits, BAdIs, and standard SAP enhancements.',
       'Debugged complex standard and custom SAP objects across modules.',
       'Improved SAP performance through code and Open SQL optimization.',
       'Collaborated with functional consultants to deliver scalable solutions.',
@@ -132,28 +165,42 @@ export const achievements = [
   },
 ];
 
-// Featured = work projects + standout personal projects
+// SAP-focused enterprise projects + selected personal work
 export const projects = [
   {
-    name: 'SAP ABAP Automation Tool',
+    name: 'SAP Object Validation Automation Tool',
     description:
-      'Internal tool that validates cross-system SAP object consistency using RFC integrations — accelerating audits and reducing transport errors.',
-    tech: ['SAP ABAP', 'RFC', 'Open SQL', 'ALV'],
+      'Cross-system SAP consistency validation via RFC integrations — automating object audits, accelerating transports, and reducing release-time defects.',
+    tech: ['SAP ABAP', 'RFC', 'Open SQL', 'ALV', 'ABAP Cloud'],
     type: 'Enterprise',
     highlight: 'Featured',
   },
   {
-    name: 'CDS & OData Backend Services',
+    name: 'SAP Enhancement Framework Solutions',
     description:
-      'Enterprise SAP backend services built on a clean CDS / OData backbone — scalable, modular, and aligned with ABAP Cloud principles.',
-    tech: ['CDS Views', 'OData', 'ABAP Cloud'],
+      'Custom business-logic implementations using User Exits, Customer Exits, and BAdIs — extending standard SAP behavior without disturbing the core.',
+    tech: ['User Exits', 'BAdIs', 'Enhancements', 'ABAP'],
     type: 'Enterprise',
   },
   {
-    name: 'Smart Forms & Adobe Forms',
+    name: 'Smart Forms & Adobe Forms Solutions',
     description:
-      'Business document automation suite — invoices, purchase orders, and reports — with reusable layouts and dynamic data binding.',
+      'Automated enterprise document generation suite — invoices, purchase orders, and reports with reusable layouts and dynamic data binding.',
     tech: ['Smart Forms', 'Adobe Forms', 'ABAP'],
+    type: 'Enterprise',
+  },
+  {
+    name: 'SAP Reporting Solutions',
+    description:
+      'Interactive ALV and enterprise reporting systems — drilldowns, exports, and performance-tuned Open SQL across multiple SAP modules.',
+    tech: ['ALV', 'Classical Reports', 'Open SQL', 'ABAP'],
+    type: 'Enterprise',
+  },
+  {
+    name: 'CDS & OData Backend Services',
+    description:
+      'Clean-core SAP backend services built on a CDS / OData backbone — scalable, modular, and aligned with ABAP Cloud principles.',
+    tech: ['CDS Views', 'OData', 'ABAP Cloud'],
     type: 'Enterprise',
   },
   {
@@ -193,10 +240,10 @@ export const projects = [
   {
     name: 'Personal Portfolio Website',
     description:
-      'This site — a modern, futuristic developer portfolio engineered with React, Tailwind, and Framer Motion.',
+      'This site — a modern, futuristic enterprise developer portfolio engineered with React, Tailwind, and Framer Motion.',
     tech: ['React', 'Tailwind CSS', 'Framer Motion', 'Vite'],
     type: 'Personal',
-    repo: 'https://github.com/thiloth',
+    repo: 'https://github.com/thiloth/Portfolio',
   },
 ];
 
@@ -208,14 +255,16 @@ export const education = [
     period: 'B.E. CSE',
   },
   {
-    school: 'Pre-University (12th)',
-    degree: 'PUC — Science',
+    school: "Swamiji's Higher Secondary School",
+    location: 'Kasaragod, Kerala',
+    degree: 'Pre-University (11th & 12th) — Science',
     score: 'Percentage: 92.4%',
-    period: '12th',
+    period: '11th & 12th',
   },
   {
-    school: 'SSLC (10th)',
-    degree: 'Secondary Education',
+    school: 'BEMHSS Kasaragod',
+    location: 'Kasaragod, Kerala',
+    degree: 'Secondary Education (SSLC)',
     score: 'Percentage: 95%',
     period: '10th',
   },
@@ -226,8 +275,18 @@ export const navLinks = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Metrics', href: '#metrics' },
   { label: 'Certifications', href: '#certifications' },
   { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
+
+// Helper used by Metrics — months since startDate (Feb 12, 2024)
+export function monthsAtIBM() {
+  const start = new Date('2024-02-12T00:00:00Z');
+  const now = new Date();
+  const months =
+    (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
+  return Math.max(1, months);
+}

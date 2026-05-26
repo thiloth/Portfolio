@@ -5,6 +5,8 @@ import Particles from './Particles';
 import Typing from './Typing';
 import AbapCodeWindow from './AbapCodeWindow';
 import ProfileImage from './ProfileImage';
+import MagneticButton from './MagneticButton';
+import { IBMLogo, SAPLogo } from './Logos';
 
 export default function Hero() {
   return (
@@ -17,15 +19,21 @@ export default function Hero() {
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-7">
-          <motion.span
+          <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="eyebrow"
+            className="flex flex-wrap items-center gap-2"
           >
-            <span className="size-1.5 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_10px_2px_rgba(16,185,129,0.7)]" />
-            Available for SAP backend opportunities
-          </motion.span>
+            <span className="eyebrow">
+              <span className="size-1.5 animate-pulse rounded-full bg-emerald-400 shadow-[0_0_10px_2px_rgba(16,185,129,0.7)]" />
+              Available for SAP backend opportunities
+            </span>
+            <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 text-[11px] font-semibold text-slate-300 backdrop-blur">
+              <IBMLogo size={12} /> <span className="text-slate-500">·</span>
+              <SAPLogo size={12} />
+            </span>
+          </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -56,8 +64,19 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="mt-6 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg"
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="mt-5 max-w-2xl font-display text-lg font-medium leading-snug text-white/90 sm:text-xl"
+          >
+            <span className="gradient-text animate-gradient bg-[length:200%_200%]">
+              {profile.tagline}.
+            </span>
+          </motion.p>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.35 }}
+            className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg"
           >
             {profile.intro}
           </motion.p>
@@ -68,22 +87,28 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.4 }}
             className="mt-8 flex flex-wrap items-center gap-3"
           >
-            <a href="#projects" className="btn-primary">
-              View Projects
-              <ArrowDown size={16} />
-            </a>
-            <a href="#contact" className="btn-ghost">
-              <Mail size={16} /> Contact Me
-            </a>
-            <a
-              href={profile.resume}
-              target="_blank"
-              rel="noreferrer"
-              download="Thiloth-B-Shetty-Resume.pdf"
-              className="btn-ghost"
-            >
-              <Download size={16} /> Resume
-            </a>
+            <MagneticButton>
+              <a href="#projects" className="btn-primary">
+                View Projects
+                <ArrowDown size={16} />
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a href="#contact" className="btn-ghost">
+                <Mail size={16} /> Contact Me
+              </a>
+            </MagneticButton>
+            <MagneticButton>
+              <a
+                href={profile.resume}
+                target="_blank"
+                rel="noreferrer"
+                download="Thiloth-B-Shetty-Resume.pdf"
+                className="btn-ghost"
+              >
+                <Download size={16} /> Resume
+              </a>
+            </MagneticButton>
           </motion.div>
 
           <motion.div

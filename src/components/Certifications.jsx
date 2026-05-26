@@ -1,8 +1,9 @@
 import { motion } from 'framer-motion';
-import { Award, BadgeCheck, Cloud, Database, Sparkles } from 'lucide-react';
+import { Award, BadgeCheck, Cloud, Database, Globe, ShieldCheck, Sparkles } from 'lucide-react';
 import { certifications, achievements } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
 import TiltCard from './TiltCard';
+import { IBMLogo, SAPLogo } from './Logos';
 
 const iconMap = {
   badge: BadgeCheck,
@@ -19,6 +20,48 @@ export default function Certifications() {
         title="Globally credentialed. Industry recognized."
         subtitle="Two SAP Global Certifications, an Azure credential, and IBM appreciation for delivery excellence."
       />
+
+      {/* Globally SAP Certified Professional spotlight */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.6 }}
+        className="mb-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/10 to-cyan-500/10 p-1"
+      >
+        <div className="relative flex flex-col items-center justify-between gap-5 rounded-[calc(theme(borderRadius.3xl)-4px)] bg-ink-950/80 p-6 backdrop-blur-xl sm:flex-row sm:p-8">
+          <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-fuchsia-500/15 blur-3xl" />
+          <div className="pointer-events-none absolute -left-24 -bottom-24 size-64 rounded-full bg-cyan-500/15 blur-3xl" />
+          <div className="flex items-center gap-4">
+            <span className="grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-glow">
+              <Globe size={22} className="text-white" />
+            </span>
+            <span className="hidden sm:inline-flex">
+              <SAPLogo size={28} />
+            </span>
+            <div>
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-300/80">
+                / spotlight
+              </p>
+              <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-2xl">
+                Globally SAP Certified Professional
+              </h3>
+              <p className="mt-1 max-w-xl text-sm text-slate-400">
+                Two SAP global certifications validate enterprise-grade backend expertise across
+                ABAP Cloud and modern SAP Business Suite directions.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:justify-end">
+            <span className="chip border-cyan-400/30 text-cyan-200">
+              <ShieldCheck size={12} /> ABAP Cloud — Back-End Developer
+            </span>
+            <span className="chip border-fuchsia-400/30 text-fuchsia-200">
+              <Sparkles size={12} /> SAP Business AI Solutions
+            </span>
+          </div>
+        </div>
+      </motion.div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {certifications.map((c, i) => {
@@ -78,8 +121,11 @@ export default function Certifications() {
                 <span className="grid size-12 place-items-center rounded-2xl bg-gradient-to-br from-amber-400/20 to-fuchsia-500/20 ring-1 ring-white/10">
                   <Award size={20} className="text-amber-300" />
                 </span>
-                <div>
-                  <p className="text-[11px] uppercase tracking-[0.22em] text-amber-300/80">{a.metric}</p>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <p className="text-[11px] uppercase tracking-[0.22em] text-amber-300/80">{a.metric}</p>
+                    {a.title.toLowerCase().includes('ibm') && <IBMLogo size={14} />}
+                  </div>
                   <h3 className="font-display text-lg font-semibold text-white">{a.title}</h3>
                 </div>
               </div>
