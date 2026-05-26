@@ -7,16 +7,16 @@ export default function ProjectBanner({ name, type, highlight }) {
   const variant = pickVariant(name, type);
 
   return (
-    <div className="relative h-40 overflow-hidden">
+    <div className="relative h-28 overflow-hidden sm:h-40">
       <BackgroundLayer type={type} />
       <Illustration variant={variant} />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink-900/90 via-ink-900/30 to-transparent" />
-      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-3">
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-300/80">
+      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-3 py-2 sm:px-5 sm:py-3">
+        <span className="truncate font-mono text-[8px] uppercase tracking-[0.18em] text-slate-300/80 sm:text-[10px] sm:tracking-[0.2em]">
           {type === 'Enterprise' ? `/ SAP · ${variant.tag}` : `/ PERSONAL · ${variant.tag}`}
         </span>
         {highlight && (
-          <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white backdrop-blur">
+          <span className="rounded-full bg-white/10 px-1.5 py-0.5 text-[8px] font-semibold uppercase tracking-[0.15em] text-white backdrop-blur sm:px-2 sm:text-[10px] sm:tracking-[0.18em]">
             {highlight}
           </span>
         )}

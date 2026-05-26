@@ -45,7 +45,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <motion.div layout className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <motion.div layout className="grid grid-cols-2 gap-3 sm:gap-5 lg:grid-cols-3 lg:gap-6">
         <AnimatePresence mode="popLayout">
           {visible.map((p, i) => (
             <motion.article
@@ -55,50 +55,69 @@ export default function Projects() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.45, delay: i * 0.05 }}
-              className="glass group relative flex h-full flex-col overflow-hidden rounded-3xl transition hover:-translate-y-1 hover:shadow-glow"
+              className="glass group relative flex h-full flex-col overflow-hidden rounded-2xl transition hover:-translate-y-1 hover:shadow-glow sm:rounded-3xl"
             >
               <ProjectBanner name={p.name} type={p.type} highlight={p.highlight} />
 
-              <div className="flex flex-1 flex-col p-6">
-                <div className="mb-2 flex items-center justify-between gap-2">
-                  <span className="chip border-cyan-400/20 text-cyan-200">
+              <div className="flex flex-1 flex-col p-4 sm:p-6">
+                <div className="mb-2 flex flex-wrap items-center justify-between gap-1.5">
+                  <span className="inline-flex items-center gap-1 rounded-full border border-cyan-400/20 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-cyan-200 sm:px-3 sm:py-1.5 sm:text-xs">
                     {p.type === 'Enterprise' ? 'SAP · Enterprise' : 'Personal · Live'}
                   </span>
                   {p.highlight && (
-                    <span className="chip border-fuchsia-400/30 text-fuchsia-200">
-                      <Sparkles size={12} /> {p.highlight}
+                    <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-400/30 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-fuchsia-200 sm:px-3 sm:py-1.5 sm:text-xs">
+                      <Sparkles size={10} /> {p.highlight}
                     </span>
                   )}
                 </div>
 
-                <h3 className="font-display text-lg font-semibold text-white">{p.name}</h3>
-                <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-400">{p.description}</p>
+                <h3 className="font-display text-sm font-semibold leading-snug text-white sm:text-lg">
+                  {p.name}
+                </h3>
+                <p className="mt-1.5 line-clamp-3 flex-1 text-xs leading-relaxed text-slate-400 sm:line-clamp-none sm:mt-2 sm:text-sm">
+                  {p.description}
+                </p>
 
-                <ul className="mt-4 flex flex-wrap gap-1.5">
-                  {p.tech.map((t) => (
+                <ul className="mt-3 flex flex-wrap gap-1 sm:mt-4 sm:gap-1.5">
+                  {p.tech.slice(0, 3).map((t) => (
                     <li
                       key={t}
-                      className="rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[11px] text-slate-300"
+                      className="rounded-md border border-white/10 bg-white/[0.03] px-1.5 py-0.5 font-mono text-[9px] text-slate-300 sm:px-2 sm:text-[11px]"
+                    >
+                      {t}
+                    </li>
+                  ))}
+                  {p.tech.length > 3 && (
+                    <li className="hidden rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[11px] text-slate-500 sm:inline-block">
+                      +{p.tech.length - 3}
+                    </li>
+                  )}
+                  {p.tech.slice(3).map((t) => (
+                    <li
+                      key={t}
+                      className="hidden rounded-md border border-white/10 bg-white/[0.03] px-2 py-0.5 font-mono text-[11px] text-slate-300 sm:inline-block"
                     >
                       {t}
                     </li>
                   ))}
                 </ul>
 
-                <div className="mt-5 flex items-center gap-2">
+                <div className="mt-3 flex flex-wrap items-center gap-1.5 sm:mt-5 sm:gap-2">
                   {p.live && (
                     <a
                       href={p.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="group/live relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 px-3.5 py-1.5 text-xs font-bold text-ink-950 shadow-[0_8px_30px_-6px_rgba(34,211,238,0.55)] transition hover:scale-[1.04] hover:shadow-[0_10px_40px_-6px_rgba(34,211,238,0.85)]"
+                      className="group/live relative inline-flex items-center gap-1 overflow-hidden rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 px-2.5 py-1 text-[10px] font-bold text-ink-950 shadow-[0_8px_30px_-6px_rgba(34,211,238,0.55)] transition hover:scale-[1.04] hover:shadow-[0_10px_40px_-6px_rgba(34,211,238,0.85)] sm:gap-1.5 sm:px-3.5 sm:py-1.5 sm:text-xs"
                     >
-                      <span className="relative flex size-2 items-center justify-center">
+                      <span className="relative flex size-1.5 items-center justify-center sm:size-2">
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ink-950/70" />
-                        <span className="relative inline-flex size-2 rounded-full bg-ink-950" />
+                        <span className="relative inline-flex size-1.5 rounded-full bg-ink-950 sm:size-2" />
                       </span>
-                      Live Demo
-                      <ExternalLink size={11} strokeWidth={3} />
+                      <span className="hidden sm:inline">Live Demo</span>
+                      <span className="sm:hidden">Live</span>
+                      <ExternalLink size={10} strokeWidth={3} className="sm:hidden" />
+                      <ExternalLink size={11} strokeWidth={3} className="hidden sm:inline" />
                     </a>
                   )}
                   {p.repo && (
@@ -106,13 +125,13 @@ export default function Projects() {
                       href={p.repo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
+                      className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/[0.04] px-2.5 py-1 text-[10px] font-semibold text-slate-200 transition hover:border-white/30 hover:bg-white/[0.08] hover:text-white sm:gap-1.5 sm:px-3 sm:py-1.5 sm:text-xs"
                     >
-                      <Github size={12} /> GitHub
+                      <Github size={11} /> GitHub
                     </a>
                   )}
                   {!p.live && !p.repo && (
-                    <span className="text-[11px] text-slate-500">Internal · IBM project</span>
+                    <span className="text-[10px] text-slate-500 sm:text-[11px]">Internal · IBM</span>
                   )}
                   <ArrowUpRight
                     size={14}
