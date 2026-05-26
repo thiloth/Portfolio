@@ -27,7 +27,6 @@ export const profile = {
 export const stats = [
   { label: 'IBM SAP Developer', value: 'IBM' },
   { label: 'SAP Global Certifications', value: '2' },
-  { label: 'Enterprise Solutions', value: '20+' },
   { label: 'Backend Specialist', value: 'ABAP Cloud' },
 ];
 
