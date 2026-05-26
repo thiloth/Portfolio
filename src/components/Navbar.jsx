@@ -124,15 +124,38 @@ export default function Navbar() {
                 >
                   <a
                     href={l.href}
-                    onClick={() => setOpen(false)}
-                    className="block rounded-xl px-4 py-3 text-base font-medium text-slate-200 hover:bg-white/5"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      const id = l.href.slice(1);
+                      const el = document.getElementById(id);
+                      setOpen(false);
+                      if (el) {
+                        requestAnimationFrame(() =>
+                          el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                        );
+                      }
+                    }}
+                    className="block rounded-xl px-4 py-3 text-base font-medium text-slate-200 active:bg-white/10"
                   >
                     {l.label}
                   </a>
                 </motion.li>
               ))}
               <li className="pt-2">
-                <a href="#contact" onClick={() => setOpen(false)} className="btn-primary w-full">
+                <a
+                  href="#contact"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const el = document.getElementById('contact');
+                    setOpen(false);
+                    if (el) {
+                      requestAnimationFrame(() =>
+                        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                      );
+                    }
+                  }}
+                  className="btn-primary w-full"
+                >
                   Hire Me
                 </a>
               </li>
