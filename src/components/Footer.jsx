@@ -5,9 +5,9 @@ import Wordmark from './Wordmark';
 
 export default function Footer() {
   return (
-    <footer className="relative mt-24 border-t border-white/5 bg-ink-950/80 backdrop-blur-xl">
-      <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-fuchsia-500/50 to-transparent" />
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-5 py-10 sm:flex-row sm:px-8">
+    <footer className="relative border-t border-white/5 bg-ink-950/80 backdrop-blur-xl">
+      <div className="pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent via-sky-500/50 to-transparent" />
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-5 px-5 py-6 sm:flex-row sm:gap-6 sm:px-8 sm:py-10">
         <div className="flex flex-col gap-2">
           <Wordmark size="md" />
           <p className="text-xs text-slate-400">{profile.tagline}</p>

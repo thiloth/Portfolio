@@ -28,7 +28,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="section">
+    <section id="contact" className="section pb-8 sm:pb-16">
       <SectionHeading
         eyebrow="Contact"
         title="Let's build something exceptional."
