@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { ArrowUpRight, ExternalLink, Github, Sparkles } from 'lucide-react';
 import { projects } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
+import ProjectBanner from './ProjectBanner';
 
 const filters = [
   { key: 'All', label: 'All' },
@@ -90,9 +91,14 @@ export default function Projects() {
                       href={p.live}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full bg-gradient-to-r from-cyan-500/20 to-fuchsia-500/20 px-3 py-1.5 text-xs font-semibold text-white ring-1 ring-white/15 transition hover:from-cyan-500/30 hover:to-fuchsia-500/30"
+                      className="group/live relative inline-flex items-center gap-1.5 overflow-hidden rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400 px-3.5 py-1.5 text-xs font-bold text-ink-950 shadow-[0_8px_30px_-6px_rgba(34,211,238,0.55)] transition hover:scale-[1.04] hover:shadow-[0_10px_40px_-6px_rgba(34,211,238,0.85)]"
                     >
-                      <ExternalLink size={12} /> Live
+                      <span className="relative flex size-2 items-center justify-center">
+                        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-ink-950/70" />
+                        <span className="relative inline-flex size-2 rounded-full bg-ink-950" />
+                      </span>
+                      Live Demo
+                      <ExternalLink size={11} strokeWidth={3} />
                     </a>
                   )}
                   {p.repo && (
@@ -100,7 +106,7 @@ export default function Projects() {
                       href={p.repo}
                       target="_blank"
                       rel="noreferrer"
-                      className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-white/30 hover:text-white"
+                      className="inline-flex items-center gap-1.5 rounded-full border border-white/15 bg-white/[0.04] px-3 py-1.5 text-xs font-semibold text-slate-200 transition hover:border-white/30 hover:bg-white/[0.08] hover:text-white"
                     >
                       <Github size={12} /> GitHub
                     </a>
@@ -122,52 +128,3 @@ export default function Projects() {
   );
 }
 
-function ProjectBanner({ name, type, highlight }) {
-  // Generative animated banner per project — no external assets needed
-  const palette =
-    type === 'Enterprise'
-      ? ['#22d3ee', '#6366f1', '#a855f7']
-      : ['#f472b6', '#a855f7', '#22d3ee'];
-
-  // Simple deterministic hash to vary banners
-  const hash = [...name].reduce((h, c) => (h * 33 + c.charCodeAt(0)) >>> 0, 5381);
-  const a = (hash % 60) - 30;
-  const b = ((hash >> 3) % 60) - 30;
-
-  return (
-    <div className="relative h-36 overflow-hidden">
-      <div
-        className="absolute inset-0"
-        style={{
-          background: `radial-gradient(120% 80% at ${50 + a}% ${30 + b}%, ${palette[0]}33, transparent 60%),
-                       radial-gradient(120% 80% at ${50 - a}% ${70 - b}%, ${palette[2]}33, transparent 60%),
-                       linear-gradient(135deg, #0b0e22 0%, #0a0c1a 100%)`,
-        }}
-      />
-      <svg className="absolute inset-0 h-full w-full opacity-40" preserveAspectRatio="none">
-        <defs>
-          <pattern id={`p-${hash}`} width="22" height="22" patternUnits="userSpaceOnUse">
-            <path d="M 22 0 L 0 0 0 22" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="1" />
-          </pattern>
-        </defs>
-        <rect width="100%" height="100%" fill={`url(#p-${hash})`} />
-      </svg>
-      <motion.div
-        animate={{ x: ['0%', '100%', '0%'] }}
-        transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-        className="absolute -top-6 h-32 w-32 rounded-full opacity-50 blur-2xl"
-        style={{ background: palette[1] }}
-      />
-      <div className="absolute inset-x-0 bottom-0 flex items-center justify-between px-5 py-3">
-        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-slate-300/80">
-          {type === 'Enterprise' ? '/ SAP · BACKEND' : '/ PERSONAL · LIVE'}
-        </span>
-        {highlight && (
-          <span className="rounded-full bg-white/10 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.18em] text-white">
-            {highlight}
-          </span>
-        )}
-      </div>
-    </div>
-  );
-}

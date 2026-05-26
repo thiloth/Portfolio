@@ -4,6 +4,8 @@ import { profile, stats, strengths } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
 import TiltCard from './TiltCard';
 import ArchitectureDiagram from './ArchitectureDiagram';
+import TechOrbit from './TechOrbit';
+import DataFlow from './DataFlow';
 import { IBMLogo, SAPLogo } from './Logos';
 
 const strengthIcons = [Zap, Rocket, Sparkles, Users, Award];
@@ -124,8 +126,18 @@ export default function About() {
       </div>
 
       {/* Enterprise SAP architecture illustration */}
-      <div className="mt-12">
-        <ArchitectureDiagram />
+      <div className="mt-12 grid gap-6 lg:grid-cols-12">
+        <div className="lg:col-span-7">
+          <ArchitectureDiagram />
+        </div>
+        <div className="lg:col-span-5">
+          <TechOrbit />
+        </div>
+      </div>
+
+      {/* Live cross-system dataflow */}
+      <div className="mt-6">
+        <DataFlow />
       </div>
     </section>
   );
