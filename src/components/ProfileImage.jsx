@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
-// Drop a real photo at /public/profile.jpg (or .png). It will replace the
+// Drop a real photo at /public/profile.jpg. It will replace the
 // animated SVG avatar automatically. Otherwise the futuristic fallback shows.
 export default function ProfileImage() {
   const [errored, setErrored] = useState(false);
