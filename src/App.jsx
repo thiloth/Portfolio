@@ -18,8 +18,11 @@ export default function App() {
       <LoadingScreen />
       <CursorGlow />
       <ScrollProgress />
+      <a href="#home" className="skip-link">
+        Skip to content
+      </a>
       <Navbar />
-      <main>
+      <main id="main">
         <Hero />
         <About />
         <Skills />

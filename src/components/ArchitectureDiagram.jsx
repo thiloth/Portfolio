@@ -7,44 +7,44 @@ const layers = [
     title: 'Presentation',
     sub: 'SAP GUI · Module Pool · Fiori',
     Icon: Layers,
-    accent: 'from-cyan-400 to-blue-500',
+    accent: 'from-sky-400 to-cyan-400',
   },
   {
     title: 'OData Services',
     sub: 'CDS-exposed APIs',
     Icon: Cloud,
-    accent: 'from-blue-500 to-indigo-500',
+    accent: 'from-cyan-500 to-sky-500',
   },
   {
     title: 'Application Layer',
     sub: 'Reports · Forms · Enhancements',
     Icon: FileCode2,
-    accent: 'from-indigo-500 to-violet-500',
+    accent: 'from-sky-500 to-blue-500',
   },
   {
     title: 'Business Logic',
     sub: 'Module Pool · User & Customer Exits',
     Icon: Cog,
-    accent: 'from-violet-500 to-fuchsia-500',
+    accent: 'from-blue-500 to-blue-600',
   },
   {
     title: 'Integration Bus',
     sub: 'IDoc · RFC · BAPI · OData',
     Icon: Server,
-    accent: 'from-fuchsia-500 to-pink-500',
+    accent: 'from-blue-600 to-indigo-600',
   },
   {
     title: 'Data Layer',
     sub: 'CDS Views · AMDP · Open SQL · HANA',
     Icon: Database,
-    accent: 'from-pink-500 to-rose-500',
+    accent: 'from-indigo-600 to-blue-700',
   },
 ];
 
 export default function ArchitectureDiagram() {
   return (
     <div className="glass relative overflow-hidden rounded-3xl p-7 sm:p-9">
-      <div className="absolute -top-32 -right-24 size-72 rounded-full bg-fuchsia-500/15 blur-3xl" />
+      <div className="absolute -top-32 -right-24 size-72 rounded-full bg-blue-500/15 blur-3xl" />
       <div className="absolute -bottom-32 -left-24 size-72 rounded-full bg-cyan-500/15 blur-3xl" />
 
       <div className="mb-6 flex items-center justify-between gap-4">
@@ -96,7 +96,7 @@ export default function ArchitectureDiagram() {
         </span>
         <div className="relative h-[2px] w-full overflow-hidden rounded-full bg-white/[0.06]">
           <motion.div
-            className="absolute top-0 h-full w-1/3 bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500"
+            className="absolute top-0 h-full w-1/3 bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-500"
             animate={{ x: ['-100%', '300%'] }}
             transition={{ duration: 3.6, repeat: Infinity, ease: 'easeInOut' }}
           />

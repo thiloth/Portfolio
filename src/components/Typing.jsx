@@ -6,6 +6,7 @@ export default function Typing({ words = [], speed = 70, pause = 1400, className
   const [del, setDel] = useState(false);
 
   useEffect(() => {
+    if (!words.length) return;
     const word = words[i % words.length];
     if (!del && text === word) {
       const t = setTimeout(() => setDel(true), pause);

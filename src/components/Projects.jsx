@@ -30,14 +30,14 @@ export default function Projects() {
             onClick={() => setFilter(f.key)}
             className={`relative rounded-full border px-4 py-2 text-sm font-medium transition ${
               filter === f.key
-                ? 'border-fuchsia-400/40 bg-white/[0.06] text-white shadow-glow'
+                ? 'border-sky-400/40 bg-white/[0.06] text-white shadow-glow'
                 : 'border-white/10 bg-white/[0.03] text-slate-400 hover:border-white/20 hover:text-white'
             }`}
           >
             {filter === f.key && (
               <motion.span
                 layoutId="filter-active"
-                className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-cyan-500/20 via-indigo-500/20 to-fuchsia-500/20"
+                className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-blue-500/20 via-sky-400/20 to-cyan-500/20"
               />
             )}
             {f.label}
@@ -65,7 +65,7 @@ export default function Projects() {
                     {p.type === 'Enterprise' ? 'SAP · Enterprise' : 'Personal · Live'}
                   </span>
                   {p.highlight && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-400/30 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-fuchsia-200 sm:px-3 sm:py-1.5 sm:text-xs">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/30 bg-white/[0.04] px-2 py-0.5 text-[10px] font-medium text-sky-200 sm:px-3 sm:py-1.5 sm:text-xs">
                       <Sparkles size={10} /> {p.highlight}
                     </span>
                   )}
@@ -135,7 +135,7 @@ export default function Projects() {
                   )}
                   <ArrowUpRight
                     size={14}
-                    className="ml-auto text-slate-500 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-fuchsia-300"
+                    className="ml-auto text-slate-500 transition group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:text-sky-300"
                   />
                 </div>
               </div>

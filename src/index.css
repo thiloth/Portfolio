@@ -14,7 +14,30 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 88px;
+  scroll-padding-top: 72px;
+}
+
+@media (min-width: 1024px) {
+  html {
+    scroll-padding-top: 88px;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 1rem;
+  z-index: 100;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #04050d;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.875rem;
+  transition: top 0.2s ease;
+}
+.skip-link:focus {
+  top: 0.75rem;
 }
 
 body {
@@ -30,12 +53,6 @@ body {
 
 section {
   position: relative;
-}
-
-/* Alternating navy band for enterprise feel */
-section.bg-navy-band {
-  background:
-    linear-gradient(180deg, transparent, rgba(7, 11, 28, 0.8), transparent);
 }
 
 /* Custom scrollbar */
@@ -73,7 +90,7 @@ section.bg-navy-band {
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, rgba(99, 102, 241, 0.6), rgba(168, 85, 247, 0.6), rgba(34, 211, 238, 0.55));
+    background: linear-gradient(135deg, rgba(29, 107, 255, 0.6), rgba(56, 189, 248, 0.6), rgba(34, 211, 238, 0.55));
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);

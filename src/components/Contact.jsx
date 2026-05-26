@@ -45,7 +45,7 @@ export default function Contact() {
           className="glass relative overflow-hidden rounded-3xl p-7 lg:col-span-2"
         >
           <div className="absolute -top-24 -left-24 size-64 rounded-full bg-cyan-500/15 blur-3xl" />
-          <div className="absolute -bottom-24 -right-24 size-64 rounded-full bg-fuchsia-500/15 blur-3xl" />
+          <div className="absolute -bottom-24 -right-24 size-64 rounded-full bg-sky-500/15 blur-3xl" />
 
           <h3 className="font-display text-xl font-semibold text-white">Get in touch</h3>
           <p className="mt-2 text-sm text-slate-400">
@@ -85,7 +85,7 @@ export default function Contact() {
           transition={{ duration: 0.55 }}
           className="glass relative overflow-hidden rounded-3xl p-7 lg:col-span-3"
         >
-          <div className="absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br from-cyan-500/10 via-indigo-500/10 to-fuchsia-500/10 blur-2xl" />
+          <div className="absolute -inset-px -z-10 rounded-3xl bg-gradient-to-br from-cyan-500/10 via-sky-500/10 to-cyan-500/10 blur-2xl" />
           <div className="grid gap-5 sm:grid-cols-2">
             <Field
               label="Your Name"
@@ -113,7 +113,7 @@ export default function Contact() {
                 rows={5}
                 required
                 placeholder="Tell me about the role, the project, or just say hi…"
-                className="w-full resize-none rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-fuchsia-400/50 focus:bg-white/[0.05] focus:shadow-glow"
+                className="w-full resize-none rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-sky-400/50 focus:bg-white/[0.05] focus:shadow-glow"
               />
             </div>
           </div>
@@ -150,9 +150,9 @@ export default function Contact() {
 
 function ContactRow({ icon: Icon, label, value, href }) {
   const content = (
-    <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-fuchsia-400/30 hover:bg-white/[0.05]">
-      <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-cyan-400/20 to-fuchsia-500/20 ring-1 ring-white/10">
-        <Icon size={16} className="text-cyan-300 transition group-hover:text-fuchsia-300" />
+    <div className="group flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 transition hover:border-sky-400/30 hover:bg-white/[0.05]">
+      <span className="grid size-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-sky-400/20 to-cyan-500/20 ring-1 ring-white/10">
+        <Icon size={16} className="text-sky-300 transition group-hover:text-sky-300" />
       </span>
       <div className="min-w-0">
         <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-500">{label}</p>
@@ -186,7 +186,7 @@ function Field({ label, name, value, onChange, type = 'text', placeholder }) {
         onChange={onChange}
         placeholder={placeholder}
         required
-        className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-fuchsia-400/50 focus:bg-white/[0.05] focus:shadow-glow"
+        className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-sm text-white placeholder:text-slate-500 outline-none transition focus:border-sky-400/50 focus:bg-white/[0.05] focus:shadow-glow"
       />
     </div>
   );

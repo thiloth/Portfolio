@@ -6,6 +6,8 @@ export default function CursorGlow() {
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+    // Skip entirely on touch devices — saves a continuous rAF loop on phones.
+    if (window.matchMedia('(hover: none), (pointer: coarse)').matches) return;
     let raf = 0;
     let x = window.innerWidth / 2;
     let y = window.innerHeight / 2;

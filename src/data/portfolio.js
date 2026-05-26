@@ -1,9 +1,7 @@
 export const profile = {
   name: 'THILOTH B SHETTY',
-  shortName: 'Thiloth',
   role: 'SAP ABAP Developer',
   company: 'IBM India Pvt. Ltd.',
-  title: 'SAP ABAP Developer | ABAP Cloud Certified | SAP Backend Developer',
   tagline: 'Building scalable enterprise SAP backend solutions with performance-focused engineering.',
   intro:
     'SAP ABAP Developer at IBM. I work on OData services, CDS Views, AMDP, IDoc integrations, Module Pool programs, ALV reports, Smart Forms, and custom enhancements that ship inside real enterprise systems. Comfortable in the debugger, deliberate about performance, and curious about modern web stacks.',
@@ -14,7 +12,7 @@ export const profile = {
   github: 'https://github.com/thiloth',
   linkedin: 'https://www.linkedin.com/in/thiloth-b-shetty',
   location: 'India',
-  resume: './resume.pdf',
+  resume: '/resume.pdf',
   typingRoles: [
     'SAP ABAP Developer',
     'SAP Backend Developer',
@@ -34,7 +32,7 @@ export const skillGroups = [
   {
     title: 'SAP ABAP Expertise',
     icon: 'code',
-    accent: 'from-indigo-500 to-violet-500',
+    accent: 'from-blue-600 to-sky-500',
     items: [
       'Classical Reports',
       'Interactive Reports',
@@ -53,7 +51,7 @@ export const skillGroups = [
   {
     title: 'Advanced SAP Technologies',
     icon: 'layers',
-    accent: 'from-violet-500 to-fuchsia-500',
+    accent: 'from-sky-500 to-cyan-400',
     items: [
       'OData Services',
       'CDS Views',
@@ -66,13 +64,13 @@ export const skillGroups = [
   {
     title: 'Development & Tools',
     icon: 'cpu',
-    accent: 'from-cyan-500 to-blue-500',
+    accent: 'from-cyan-500 to-blue-600',
     items: ['Core Java', 'SQL', 'GitHub', 'APIs', 'SAP GUI', 'SE38', 'SE80', 'SE11', 'SE37'],
   },
   {
     title: 'Modern Tech Interests',
     icon: 'sparkles',
-    accent: 'from-emerald-400 to-teal-500',
+    accent: 'from-blue-700 to-cyan-300',
     items: [
       'React',
       'Tailwind CSS',
@@ -115,18 +113,18 @@ export const certifications = [
   {
     title: 'SAP Certified — Back-End Developer (ABAP Cloud)',
     issuer: 'SAP — Global Certification',
-    color: 'from-indigo-500 to-violet-500',
+    color: 'from-blue-600 to-sky-500',
     icon: 'badge',
     badge: 'Global',
-    pdf: './SAP backend abap.pdf',
+    pdf: '/SAP backend abap.pdf',
   },
   {
     title: 'SAP Certified — Positioning SAP Business AI Solutions as Part of SAP Business Suite',
     issuer: 'SAP — Global Certification',
-    color: 'from-fuchsia-500 to-pink-500',
+    color: 'from-sky-500 to-cyan-400',
     icon: 'sparkles',
     badge: 'Global',
-    pdf: './SAP Business Suite.pdf',
+    pdf: '/SAP Business Suite.pdf',
   },
   {
     title: 'Microsoft Certified: Azure Fundamentals (AZ-900)',

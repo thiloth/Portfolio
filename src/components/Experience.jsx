@@ -14,7 +14,7 @@ export default function Experience() {
       />
 
       <div className="relative mx-auto max-w-4xl">
-        <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-400/50 via-indigo-500/40 to-fuchsia-500/40 sm:left-1/2" />
+        <div className="absolute left-4 top-0 bottom-0 w-px bg-gradient-to-b from-sky-400/50 via-blue-500/40 to-cyan-400/40 sm:left-1/2" />
         {experience.map((exp, i) => (
           <motion.article
             key={exp.company}
@@ -25,8 +25,8 @@ export default function Experience() {
             className="relative mb-10 sm:grid sm:grid-cols-2 sm:gap-12"
           >
             <span className="absolute left-4 top-6 z-10 grid -translate-x-1/2 place-items-center sm:left-1/2">
-              <span className="absolute size-7 animate-ping rounded-full bg-fuchsia-400/30" />
-              <span className="grid size-4 place-items-center rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-500 ring-4 ring-ink-950" />
+              <span className="absolute size-7 animate-ping rounded-full bg-sky-400/30" />
+              <span className="grid size-4 place-items-center rounded-full bg-gradient-to-br from-sky-400 to-cyan-400 ring-4 ring-ink-950" />
             </span>
 
             <div className={`pl-12 sm:pl-0 ${i % 2 === 0 ? 'sm:pr-10 sm:text-right' : 'sm:col-start-2 sm:pl-10'}`}>
@@ -35,7 +35,7 @@ export default function Experience() {
                   i % 2 === 0 ? 'sm:text-right' : ''
                 }`}
               >
-                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-cyan-300">
+                <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-sky-300">
                   <Briefcase size={12} />
                   <span>{exp.period}</span>
                 </div>

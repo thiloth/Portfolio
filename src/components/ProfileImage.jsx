@@ -16,7 +16,7 @@ export default function ProfileImage() {
         className="absolute inset-0 rounded-full"
         style={{
           background:
-            'conic-gradient(from 90deg, rgba(34,211,238,0.0), rgba(34,211,238,0.6), rgba(168,85,247,0.7), rgba(99,102,241,0.6), rgba(34,211,238,0.0))',
+            'conic-gradient(from 90deg, rgba(56,189,248,0.0), rgba(56,189,248,0.7), rgba(34,211,238,0.7), rgba(29,107,255,0.6), rgba(56,189,248,0.0))',
           filter: 'blur(2px)',
         }}
       />
@@ -32,7 +32,7 @@ export default function ProfileImage() {
       <div className="absolute inset-[14px] overflow-hidden rounded-full ring-1 ring-white/10 shadow-glow">
         {!errored ? (
           <img
-            src="./profile.jpg"
+            src="/profile.jpg"
             alt="Thiloth B Shetty"
             loading="eager"
             onError={() => setErrored(true)}
@@ -59,7 +59,7 @@ export default function ProfileImage() {
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         className="absolute -right-2 bottom-12 hidden rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2 text-[11px] font-semibold text-white shadow-card backdrop-blur-xl sm:block"
       >
-        <span className="bg-gradient-to-r from-fuchsia-300 to-pink-300 bg-clip-text text-transparent">
+        <span className="bg-gradient-to-r from-blue-300 to-sky-300 bg-clip-text text-transparent">
           IBM
         </span>
         <span className="ml-1 text-slate-400">SAP Developer</span>

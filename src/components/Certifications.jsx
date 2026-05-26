@@ -27,20 +27,20 @@ export default function Certifications() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.6 }}
-        className="mb-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-indigo-500/10 via-fuchsia-500/10 to-cyan-500/10 p-1"
+        className="mb-10 overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-blue-600/15 via-sky-500/12 to-cyan-400/15 p-1"
       >
         <div className="relative flex flex-col items-center justify-between gap-5 rounded-[calc(theme(borderRadius.3xl)-4px)] bg-ink-950/80 p-6 backdrop-blur-xl sm:flex-row sm:p-8">
-          <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-fuchsia-500/15 blur-3xl" />
+          <div className="pointer-events-none absolute -right-24 -top-24 size-64 rounded-full bg-blue-500/15 blur-3xl" />
           <div className="pointer-events-none absolute -left-24 -bottom-24 size-64 rounded-full bg-cyan-500/15 blur-3xl" />
           <div className="flex items-center gap-4">
-            <span className="grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500 shadow-glow">
+            <span className="grid size-14 place-items-center rounded-2xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400 shadow-glow">
               <Globe size={22} className="text-white" />
             </span>
             <span className="hidden sm:inline-flex">
               <SAPLogo size={28} />
             </span>
             <div>
-              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-cyan-300/80">
+              <p className="font-mono text-[10px] uppercase tracking-[0.3em] text-sky-300/80">
                 / spotlight
               </p>
               <h3 className="mt-1 font-display text-xl font-bold text-white sm:text-2xl">
@@ -56,7 +56,7 @@ export default function Certifications() {
             <span className="chip border-cyan-400/30 text-cyan-200">
               <ShieldCheck size={12} /> ABAP Cloud — Back-End Developer
             </span>
-            <span className="chip border-fuchsia-400/30 text-fuchsia-200">
+            <span className="chip border-sky-400/30 text-sky-200">
               <Sparkles size={12} /> SAP Business AI Solutions
             </span>
           </div>
@@ -86,7 +86,7 @@ export default function Certifications() {
                     <Icon size={20} className="hidden text-white sm:block" />
                   </span>
                   {c.badge && (
-                    <span className="inline-flex items-center gap-1 rounded-full border border-fuchsia-400/30 bg-white/[0.04] px-2 py-0.5 text-[9px] font-medium text-fuchsia-200 sm:px-3 sm:py-1.5 sm:text-xs">
+                    <span className="inline-flex items-center gap-1 rounded-full border border-sky-400/30 bg-white/[0.04] px-2 py-0.5 text-[9px] font-medium text-sky-200 sm:px-3 sm:py-1.5 sm:text-xs">
                       <Sparkles size={10} /> {c.badge}
                     </span>
                   )}

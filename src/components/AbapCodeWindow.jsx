@@ -45,7 +45,7 @@ export default function AbapCodeWindow() {
       transition={{ duration: 0.7, delay: 0.3 }}
       className="relative w-full max-w-xl"
     >
-      <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-r from-cyan-500/30 via-indigo-500/30 to-fuchsia-500/30 opacity-60 blur-2xl" />
+      <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-r from-blue-600/25 via-sky-500/25 to-cyan-400/25 opacity-60 blur-2xl" />
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-ink-900/80 shadow-card backdrop-blur-xl">
         <div className="flex items-center justify-between gap-2 border-b border-white/5 bg-white/[0.03] px-3 py-2 sm:px-4 sm:py-2.5">
           <div className="flex shrink-0 items-center gap-1.5">

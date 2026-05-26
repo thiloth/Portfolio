@@ -28,8 +28,8 @@ export default function ProjectBanner({ name, type, highlight }) {
 function BackgroundLayer({ type }) {
   const palette =
     type === 'Enterprise'
-      ? ['#22d3ee', '#6366f1', '#a855f7']
-      : ['#f472b6', '#a855f7', '#22d3ee'];
+      ? ['#38bdf8', '#1d6bff', '#22d3ee']
+      : ['#0ea5e9', '#22d3ee', '#7dd3fc'];
 
   return (
     <>
@@ -109,10 +109,10 @@ function Illustration({ variant }) {
 
 /* ---------- Illustrations ---------- */
 
-const NODE = 'rgba(34,211,238,0.95)';
-const NODE_DIM = 'rgba(34,211,238,0.35)';
-const LINE = 'rgba(168,85,247,0.7)';
-const ACCENT = 'rgba(99,102,241,0.95)';
+const NODE = 'rgba(56,189,248,0.95)';
+const NODE_DIM = 'rgba(56,189,248,0.35)';
+const LINE = 'rgba(29,107,255,0.7)';
+const ACCENT = 'rgba(34,211,238,0.95)';
 
 function IntegrationArt() {
   // 3 systems exchanging data via animated lines

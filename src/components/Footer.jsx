@@ -28,7 +28,7 @@ export default function Footer() {
             target="_blank"
             rel="noreferrer"
             aria-label="GitHub"
-            className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-0.5 hover:border-fuchsia-400/50 hover:text-white hover:shadow-glow"
+            className="grid size-10 place-items-center rounded-xl border border-white/10 bg-white/[0.04] text-slate-300 transition hover:-translate-y-0.5 hover:border-cyan-400/50 hover:text-white hover:shadow-glow-cyan"
           >
             <Github size={16} />
           </a>
@@ -55,7 +55,7 @@ export default function Footer() {
           <motion.a
             href="#home"
             whileHover={{ y: -3 }}
-            className="grid size-10 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-indigo-500/40 to-fuchsia-500/40 text-white shadow-glow"
+            className="grid size-10 place-items-center rounded-xl border border-white/10 bg-gradient-to-br from-blue-600/40 to-sky-400/40 text-white shadow-[0_0_24px_rgba(56,189,248,0.4)]"
             aria-label="Scroll to top"
           >
             <ArrowUp size={16} />

@@ -6,7 +6,7 @@ export function IBMLogo({ size = 28, className = '' }) {
   // PNG aspect ratio is roughly 2.5:1 for the standard IBM 8-bar mark.
   return (
     <img
-      src="./IBMlogo.png"
+      src="/IBMlogo.png"
       alt="IBM"
       height={size}
       style={{ height: size, width: 'auto' }}

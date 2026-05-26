@@ -12,7 +12,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
           transition={{ duration: 0.5 }}
           className="eyebrow"
         >
-          <span className="size-1.5 rounded-full bg-gradient-to-r from-cyan-400 to-fuchsia-500" />
+          <span className="size-1.5 rounded-full bg-gradient-to-r from-sky-400 to-cyan-300" />
           {eyebrow}
         </motion.span>
       )}
@@ -41,7 +41,7 @@ export default function SectionHeading({ eyebrow, title, subtitle, align = 'cent
         whileInView={{ scaleX: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7, delay: 0.2 }}
-        className={`mt-6 h-px w-24 origin-left bg-gradient-to-r from-cyan-400 via-indigo-500 to-fuchsia-500 ${
+        className={`mt-6 h-px w-24 origin-left bg-gradient-to-r from-blue-500 via-sky-400 to-cyan-300 ${
           align === 'center' ? 'mx-auto' : ''
         }`}
       />

@@ -24,43 +24,22 @@ export default {
           700: '#111a44',
           600: '#1a2560',
         },
-        neon: {
-          // Electric blue + violet enterprise accents
-          blue: '#3b82f6',
-          electric: '#1d6bff',
-          cyan: '#22d3ee',
-          purple: '#a855f7',
-          violet: '#7c3aed',
-          pink: '#ec4899',
-        },
       },
       backgroundImage: {
         'grid-glow':
           'radial-gradient(circle at 30% 20%, rgba(29,107,255,0.18), transparent 40%), radial-gradient(circle at 80% 80%, rgba(56,189,248,0.14), transparent 40%)',
       },
       boxShadow: {
-        glow: '0 0 30px rgba(139, 92, 246, 0.35)',
+        glow: '0 0 30px rgba(56, 189, 248, 0.35)',
         'glow-blue': '0 0 30px rgba(59, 130, 246, 0.35)',
         'glow-cyan': '0 0 30px rgba(34, 211, 238, 0.35)',
         card: '0 10px 40px -10px rgba(2, 6, 23, 0.6)',
       },
       animation: {
-        float: 'float 8s ease-in-out infinite',
-        'float-slow': 'float 14s ease-in-out infinite',
-        'pulse-slow': 'pulse 6s ease-in-out infinite',
-        shimmer: 'shimmer 3s linear infinite',
         gradient: 'gradient 12s ease infinite',
         blink: 'blink 1s steps(1) infinite',
       },
       keyframes: {
-        float: {
-          '0%,100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-18px)' },
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
-        },
         gradient: {
           '0%,100%': { backgroundPosition: '0% 50%' },
           '50%': { backgroundPosition: '100% 50%' },

@@ -9,23 +9,23 @@ const rings = [
     radius: 70,
     duration: 22,
     items: ['ABAP', 'OData', 'CDS', 'AMDP', 'IDoc'],
-    color: 'rgba(34,211,238,0.95)',
-    bg: 'rgba(34,211,238,0.10)',
+    color: 'rgba(56,189,248,0.95)',
+    bg: 'rgba(56,189,248,0.10)',
   },
   {
     radius: 110,
     duration: 32,
     reverse: true,
     items: ['RFC', 'BAPI', 'Smart Forms', 'Module Pool', 'ALV', 'Open SQL'],
-    color: 'rgba(168,85,247,0.95)',
-    bg: 'rgba(168,85,247,0.10)',
+    color: 'rgba(34,211,238,0.95)',
+    bg: 'rgba(34,211,238,0.10)',
   },
   {
     radius: 150,
     duration: 44,
     items: ['React', 'Tailwind', 'Vercel', 'GitHub', 'Java', 'SQL', 'API'],
-    color: 'rgba(236,72,153,0.9)',
-    bg: 'rgba(236,72,153,0.10)',
+    color: 'rgba(125,211,252,0.95)',
+    bg: 'rgba(125,211,252,0.10)',
   },
 ];
 
@@ -93,12 +93,12 @@ export default function TechOrbit() {
           <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <motion.div
               animate={{ scale: [1, 1.05, 1], boxShadow: [
-                '0 0 30px rgba(168,85,247,0.4)',
-                '0 0 60px rgba(34,211,238,0.55)',
-                '0 0 30px rgba(168,85,247,0.4)',
+                '0 0 30px rgba(29,107,255,0.45)',
+                '0 0 60px rgba(56,189,248,0.6)',
+                '0 0 30px rgba(29,107,255,0.45)',
               ] }}
               transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-              className="grid size-20 place-items-center rounded-2xl bg-gradient-to-br from-cyan-400 via-indigo-500 to-fuchsia-500"
+              className="grid size-20 place-items-center rounded-2xl bg-gradient-to-br from-blue-700 via-sky-500 to-cyan-400"
             >
               <span className="font-display text-lg font-extrabold tracking-wide text-white">
                 SAP

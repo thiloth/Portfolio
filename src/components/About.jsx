@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { Award, Code2, Database, Layers, Rocket, Sparkles, Users, Zap } from 'lucide-react';
+import { Code2, Database, Layers, Rocket, Sparkles, Users, Zap } from 'lucide-react';
 import { profile, stats, strengths } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
 import TiltCard from './TiltCard';
@@ -8,7 +8,7 @@ import TechOrbit from './TechOrbit';
 import DataFlow from './DataFlow';
 import { IBMLogo, SAPLogo } from './Logos';
 
-const strengthIcons = [Zap, Rocket, Sparkles, Users, Award];
+const strengthIcons = [Zap, Rocket, Sparkles, Users, Layers];
 
 export default function About() {
   return (
@@ -22,12 +22,12 @@ export default function About() {
       <div className="grid gap-6 lg:grid-cols-12">
         <TiltCard className="lg:col-span-7" max={4}>
           <div className="glass relative h-full overflow-hidden rounded-3xl p-7 sm:p-9 neon-border">
-            <div className="absolute -top-24 -right-24 size-64 rounded-full bg-fuchsia-500/15 blur-3xl" />
+            <div className="absolute -top-24 -right-24 size-64 rounded-full bg-sky-500/15 blur-3xl" />
             <div className="absolute -bottom-24 -left-24 size-64 rounded-full bg-cyan-500/15 blur-3xl" />
 
             <div className="flex items-center gap-3">
-              <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-cyan-400/20 to-fuchsia-500/20 ring-1 ring-white/10">
-                <Code2 size={18} className="text-cyan-300" />
+              <span className="grid size-10 place-items-center rounded-xl bg-gradient-to-br from-sky-400/20 to-cyan-500/20 ring-1 ring-white/10">
+                <Code2 size={18} className="text-sky-300" />
               </span>
               <h3 className="font-display text-xl font-semibold text-white">Who I am</h3>
             </div>
@@ -57,9 +57,9 @@ export default function About() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.4 }}
                   transition={{ duration: 0.4, delay: i * 0.05 }}
-                  className="group flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-slate-200 transition hover:border-fuchsia-400/40 hover:bg-white/[0.06]"
+                  className="group flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-slate-200 transition hover:border-sky-400/40 hover:bg-white/[0.06]"
                 >
-                  <Icon size={14} className="text-cyan-300 transition group-hover:text-fuchsia-300" />
+                  <Icon size={14} className="text-sky-300 transition group-hover:text-cyan-300" />
                   {label}
                 </motion.div>
               ))}
@@ -74,7 +74,7 @@ export default function About() {
                   const Icon = strengthIcons[i % strengthIcons.length];
                   return (
                     <span key={s} className="chip">
-                      <Icon size={12} className="text-fuchsia-300" />
+                      <Icon size={12} className="text-sky-300" />
                       {s}
                     </span>
                   );

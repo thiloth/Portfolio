@@ -7,21 +7,21 @@ import { motion, useInView } from 'framer-motion';
 const channels = [
   {
     label: 'IDoc',
-    color: '#22d3ee',
+    color: '#38bdf8',
     metric: 'Inbound · Async',
     speed: 3.2,
     packets: 5,
   },
   {
     label: 'OData',
-    color: '#a855f7',
+    color: '#22d3ee',
     metric: 'Sync · REST',
     speed: 2.4,
     packets: 6,
   },
   {
     label: 'RFC',
-    color: '#f472b6',
+    color: '#1d6bff',
     metric: 'Direct · Binary',
     speed: 4.0,
     packets: 4,
@@ -34,7 +34,7 @@ export default function DataFlow() {
   return (
     <div ref={ref} className="glass relative overflow-hidden rounded-3xl p-6 sm:p-8">
       <div className="pointer-events-none absolute -top-32 -right-24 size-72 rounded-full bg-cyan-500/15 blur-3xl" />
-      <div className="pointer-events-none absolute -bottom-32 -left-24 size-72 rounded-full bg-fuchsia-500/15 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-32 -left-24 size-72 rounded-full bg-blue-500/15 blur-3xl" />
 
       <div className="mb-5 flex items-center justify-between gap-4">
         <div>
@@ -54,7 +54,7 @@ export default function DataFlow() {
       <div className="grid grid-cols-[80px_1fr_80px] items-stretch gap-3">
         {/* Source */}
         <div className="grid place-items-center rounded-2xl border border-white/10 bg-white/[0.04] p-3 text-center">
-          <div className="size-10 rounded-xl bg-gradient-to-br from-cyan-400/30 to-indigo-500/30 ring-1 ring-white/15 grid place-items-center">
+          <div className="size-10 rounded-xl bg-gradient-to-br from-sky-400/30 to-blue-500/30 ring-1 ring-white/15 grid place-items-center">
             <span className="font-display text-xs font-bold text-white">ECC</span>
           </div>
           <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-400">source</p>
@@ -128,7 +128,7 @@ export default function DataFlow() {
 
         {/* Target */}
         <div className="grid place-items-center rounded-2xl border border-white/10 bg-white/[0.04] p-3 text-center">
-          <div className="size-10 rounded-xl bg-gradient-to-br from-fuchsia-500/30 to-pink-500/30 ring-1 ring-white/15 grid place-items-center">
+          <div className="size-10 rounded-xl bg-gradient-to-br from-cyan-500/30 to-sky-500/30 ring-1 ring-white/15 grid place-items-center">
             <span className="font-display text-xs font-bold text-white">S/4</span>
           </div>
           <p className="mt-2 font-mono text-[9px] uppercase tracking-[0.18em] text-slate-400">target</p>
@@ -139,7 +139,7 @@ export default function DataFlow() {
       <div className="mt-5 grid grid-cols-3 gap-3">
         {[
           { k: 'msgs / min', v: '1.2k', color: 'text-cyan-300' },
-          { k: 'avg latency', v: '38ms', color: 'text-fuchsia-300' },
+          { k: 'avg latency', v: '38ms', color: 'text-blue-300' },
           { k: 'success rate', v: '99.9%', color: 'text-emerald-300' },
         ].map((s) => (
           <div
