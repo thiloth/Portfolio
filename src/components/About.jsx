@@ -12,7 +12,7 @@ export default function About() {
       <SectionHeading
         eyebrow="About Me"
         title="Crafting enterprise SAP backends with care."
-        subtitle="SAP ABAP Developer at IBM India Pvt. Ltd., specializing in ABAP Cloud, RAP, CDS, OData, and scalable backend architectures that power real businesses."
+        subtitle="SAP ABAP Developer at IBM India Pvt. Ltd., specializing in ABAP Cloud, CDS Views, OData, and scalable backend architectures that power real businesses."
       />
 
       <div className="grid gap-6 lg:grid-cols-12">
@@ -37,8 +37,8 @@ export default function About() {
 
             <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3">
               {[
-                { icon: Layers, label: 'SAP RAP' },
-                { icon: Database, label: 'CDS · OData' },
+                { icon: Layers, label: 'CDS Views' },
+                { icon: Database, label: 'OData' },
                 { icon: Code2, label: 'ABAP Cloud' },
                 { icon: Zap, label: 'Performance' },
                 { icon: Sparkles, label: 'Smart Forms' },

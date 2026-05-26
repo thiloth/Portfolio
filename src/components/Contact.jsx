@@ -31,7 +31,7 @@ export default function Contact() {
       <SectionHeading
         eyebrow="Contact"
         title="Let's build something exceptional."
-        subtitle="Open to SAP backend roles, freelance ABAP / RAP work, and meaningful collaborations."
+        subtitle="Open to SAP backend roles, freelance ABAP work, and meaningful collaborations."
       />
 
       <div className="grid gap-6 lg:grid-cols-5">

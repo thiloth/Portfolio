@@ -79,6 +79,7 @@ export default function Hero() {
               href={profile.resume}
               target="_blank"
               rel="noreferrer"
+              download="Thiloth-B-Shetty-Resume.pdf"
               className="btn-ghost"
             >
               <Download size={16} /> Resume

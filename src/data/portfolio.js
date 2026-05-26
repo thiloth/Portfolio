@@ -6,7 +6,7 @@ export const profile = {
   title: 'SAP ABAP Developer | ABAP Cloud Certified | SAP Backend Developer',
   tagline: 'Engineering Scalable SAP Backend Solutions',
   intro:
-    'Passionate SAP ABAP Developer specializing in enterprise SAP backend development, ABAP Cloud, RAP, custom SAP solutions, debugging, integrations, and scalable backend architectures. Currently working at IBM India Pvt. Ltd. delivering enterprise-grade SAP solutions.',
+    'Passionate SAP ABAP Developer specializing in enterprise SAP backend development, ABAP Cloud, custom SAP solutions, debugging, integrations, and scalable backend architectures. Currently working at IBM India Pvt. Ltd. delivering enterprise-grade SAP solutions.',
   startDate: 'February 12, 2024',
   email: 'thilothb@gmail.com',
   phone: '+91 94460 15365',
@@ -19,7 +19,7 @@ export const profile = {
     'SAP ABAP Developer',
     'ABAP Cloud Certified',
     'SAP Backend Developer',
-    'SAP RAP Developer',
+    'Enterprise SAP Engineer',
   ],
 };
 
@@ -37,7 +37,6 @@ export const skillGroups = [
     items: [
       'SAP ABAP',
       'ABAP Cloud',
-      'SAP RAP',
       'CDS Views',
       'OData Services',
       'ALV Reports',
@@ -144,10 +143,10 @@ export const projects = [
     highlight: 'Featured',
   },
   {
-    name: 'SAP RAP Applications',
+    name: 'CDS & OData Backend Services',
     description:
-      'Enterprise-grade SAP RAP applications built on a clean CDS / OData backbone with scalable, modular backend architecture.',
-    tech: ['ABAP RAP', 'CDS Views', 'OData', 'ABAP Cloud'],
+      'Enterprise SAP backend services built on a clean CDS / OData backbone — scalable, modular, and aligned with ABAP Cloud principles.',
+    tech: ['CDS Views', 'OData', 'ABAP Cloud'],
     type: 'Enterprise',
   },
   {

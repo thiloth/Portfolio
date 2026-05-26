@@ -70,7 +70,7 @@ export default function ProfileImage() {
         className="absolute -bottom-2 left-10 hidden rounded-2xl border border-white/10 bg-white/[0.06] px-3 py-2 text-[11px] font-semibold text-white shadow-card backdrop-blur-xl sm:block"
       >
         <span className="bg-gradient-to-r from-emerald-300 to-teal-300 bg-clip-text text-transparent">
-          RAP · CDS · OData
+          CDS · OData · ABAP Cloud
         </span>
       </motion.div>
     </div>

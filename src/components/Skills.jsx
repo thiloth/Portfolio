@@ -65,7 +65,7 @@ export default function Skills() {
 
 function SkillsMarquee() {
   const items = [
-    'SAP ABAP', 'ABAP Cloud', 'RAP', 'CDS Views', 'OData',
+    'SAP ABAP', 'ABAP Cloud', 'CDS Views', 'OData',
     'Smart Forms', 'Adobe Forms', 'ALV', 'RFC', 'BAPI',
     'User Exits', 'Open SQL', 'SE38', 'SE80', 'SE11',
   ];
