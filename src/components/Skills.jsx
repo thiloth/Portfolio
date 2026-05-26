@@ -1,9 +1,15 @@
 import { motion } from 'framer-motion';
-import { Code2, Cpu, Wrench } from 'lucide-react';
+import { Code2, Cpu, Layers, Sparkles, Wrench } from 'lucide-react';
 import { skillGroups } from '../data/portfolio';
 import SectionHeading from './SectionHeading';
 
-const groupIcon = [Code2, Cpu, Wrench];
+const iconMap = {
+  code: Code2,
+  layers: Layers,
+  cpu: Cpu,
+  sparkles: Sparkles,
+  wrench: Wrench,
+};
 
 export default function Skills() {
   return (
@@ -11,12 +17,12 @@ export default function Skills() {
       <SectionHeading
         eyebrow="Skills"
         title="My technical toolbelt."
-        subtitle="A curated stack across SAP, backend development, and the tools I use every day to deliver enterprise solutions."
+        subtitle="Deep SAP ABAP expertise, advanced SAP technologies, modern development tools, and a curiosity for full stack web."
       />
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
         {skillGroups.map((g, gi) => {
-          const Icon = groupIcon[gi % groupIcon.length];
+          const Icon = iconMap[g.icon] || Code2;
           return (
             <motion.div
               key={g.title}
@@ -65,9 +71,9 @@ export default function Skills() {
 
 function SkillsMarquee() {
   const items = [
-    'SAP ABAP', 'ABAP Cloud', 'CDS Views', 'OData',
-    'Smart Forms', 'Adobe Forms', 'ALV', 'RFC', 'BAPI',
-    'User Exits', 'Open SQL', 'SE38', 'SE80', 'SE11',
+    'SAP ABAP', 'OData', 'CDS Views', 'AMDP', 'IDoc',
+    'Module Pool', 'Smart Forms', 'Adobe Forms', 'ALV',
+    'RFC', 'User Exits', 'Open SQL', 'SE38', 'SE80', 'SE11',
   ];
   const row = [...items, ...items];
   return (

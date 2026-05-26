@@ -6,7 +6,7 @@ export const profile = {
   title: 'SAP ABAP Developer | ABAP Cloud Certified | SAP Backend Developer',
   tagline: 'Designing Enterprise SAP Solutions with Clean Backend Engineering',
   intro:
-    'Enterprise SAP backend engineer at IBM India Pvt. Ltd. — building reliable, scalable, and clean-core ABAP Cloud solutions. Specialized in custom reporting, Smart Forms, enhancements, debugging, and cross-system integrations that power mission-critical business processes.',
+    'SAP ABAP Developer at IBM with hands-on experience in enterprise SAP backend development including OData services, ALV reports, Module Pool programming, IDoc integrations, CDS Views, AMDP, performance optimization, Smart Forms, and custom SAP enhancements. Passionate about scalable backend architecture, SAP integrations, debugging complex business scenarios, and exploring modern web technologies.',
   startDate: 'February 12, 2024',
   email: 'thilothb@gmail.com',
   phone: '+91 94460 15365',
@@ -17,9 +17,10 @@ export const profile = {
   resume: './resume.pdf',
   typingRoles: [
     'SAP ABAP Developer',
-    'ABAP Cloud Certified',
     'SAP Backend Developer',
-    'Enterprise SAP Engineer',
+    'OData & CDS Developer',
+    'Enterprise Solution Builder',
+    'Exploring Full Stack Development',
   ],
 };
 
@@ -62,35 +63,54 @@ export const metrics = [
 
 export const skillGroups = [
   {
-    title: 'SAP Skills',
-    accent: 'from-indigo-500 to-fuchsia-500',
+    title: 'SAP ABAP Expertise',
+    icon: 'code',
+    accent: 'from-indigo-500 to-violet-500',
     items: [
-      'SAP ABAP',
-      'ABAP Cloud',
-      'CDS Views',
-      'OData Services',
+      'Classical Reports',
+      'Interactive Reports',
       'ALV Reports',
+      'Module Pool Programming',
       'Smart Forms',
       'Adobe Forms',
       'User Exits',
       'Customer Exits',
-      'BAdIs / Enhancements',
-      'RFC Integrations',
-      'BAPI',
+      'Enhancements',
+      'Data Dictionary',
       'Debugging',
-      'Open SQL',
-      'Performance Tuning',
+      'Performance Optimization',
     ],
   },
   {
-    title: 'Development Skills',
-    accent: 'from-cyan-500 to-blue-500',
-    items: ['Backend Development', 'APIs', 'Core Java', 'SQL', 'React', 'JavaScript'],
+    title: 'Advanced SAP Technologies',
+    icon: 'layers',
+    accent: 'from-violet-500 to-fuchsia-500',
+    items: [
+      'OData Services',
+      'CDS Views',
+      'AMDP',
+      'IDoc',
+      'RFC Integrations',
+      'Open SQL',
+    ],
   },
   {
-    title: 'SAP Tools',
-    accent: 'from-fuchsia-500 to-pink-500',
-    items: ['SE38', 'SE80', 'SE37', 'SE11', 'SAP GUI', 'ADT (Eclipse)'],
+    title: 'Development & Tools',
+    icon: 'cpu',
+    accent: 'from-cyan-500 to-blue-500',
+    items: ['Core Java', 'SQL', 'GitHub', 'APIs', 'SAP GUI', 'SE38', 'SE80', 'SE11', 'SE37'],
+  },
+  {
+    title: 'Modern Tech Interests',
+    icon: 'sparkles',
+    accent: 'from-emerald-400 to-teal-500',
+    items: [
+      'React',
+      'Tailwind CSS',
+      'Responsive UI Design',
+      'Vercel Deployment',
+      'Full Stack Learning',
+    ],
   },
 ];
 
@@ -109,14 +129,15 @@ export const experience = [
     period: 'February 12, 2024 — Present',
     location: 'India',
     bullets: [
-      'Developed custom ALV and Classical reports for enterprise SAP modules.',
-      'Created Smart Forms and Adobe Forms for business document automation.',
-      'Worked on User Exits, Customer Exits, BAdIs, and standard SAP enhancements.',
-      'Debugged complex standard and custom SAP objects across modules.',
-      'Improved SAP performance through code and Open SQL optimization.',
-      'Collaborated with functional consultants to deliver scalable solutions.',
-      'Built an SAP automation tool to validate cross-system object consistency via RFC.',
-      'Delivered scalable SAP backend solutions aligned with ABAP Cloud guidelines.',
+      'Developed enterprise ALV and Classical Reports across SAP modules.',
+      'Worked on OData services and SAP integrations for cross-system data flow.',
+      'Developed Module Pool applications for custom transactional screens.',
+      'Created and enhanced Smart Forms and Adobe Forms for business documents.',
+      'Worked on IDoc integrations for inbound / outbound enterprise messaging.',
+      'Built CDS Views and AMDP implementations for performant data modeling.',
+      'Performed SAP performance optimization and complex debugging.',
+      'Implemented custom enhancements (User Exits, Customer Exits) and backend logic.',
+      'Collaborated with functional teams to deliver enterprise SAP solutions.',
     ],
   },
 ];
@@ -168,46 +189,53 @@ export const achievements = [
 // SAP-focused enterprise projects + selected personal work
 export const projects = [
   {
-    name: 'SAP Object Validation Automation Tool',
+    name: 'SAP Integration Solutions',
     description:
-      'Cross-system SAP consistency validation via RFC integrations — automating object audits, accelerating transports, and reducing release-time defects.',
-    tech: ['SAP ABAP', 'RFC', 'Open SQL', 'ALV', 'ABAP Cloud'],
+      'Enterprise integrations using IDoc, RFC, and OData services — reliable, monitored, cross-system data flow for mission-critical processes.',
+    tech: ['IDoc', 'RFC', 'OData', 'ABAP'],
     type: 'Enterprise',
     highlight: 'Featured',
   },
   {
-    name: 'SAP Enhancement Framework Solutions',
+    name: 'Performance Optimization Solutions',
     description:
-      'Custom business-logic implementations using User Exits, Customer Exits, and BAdIs — extending standard SAP behavior without disturbing the core.',
-    tech: ['User Exits', 'BAdIs', 'Enhancements', 'ABAP'],
+      'Optimized SAP programs and database performance for enterprise applications — code, Open SQL, and runtime tuning for measurable speed gains.',
+    tech: ['Performance Tuning', 'Open SQL', 'Debugging', 'ABAP'],
     type: 'Enterprise',
   },
   {
-    name: 'Smart Forms & Adobe Forms Solutions',
+    name: 'CDS & AMDP Development',
     description:
-      'Automated enterprise document generation suite — invoices, purchase orders, and reports with reusable layouts and dynamic data binding.',
-    tech: ['Smart Forms', 'Adobe Forms', 'ABAP'],
+      'Backend data modeling and optimized database procedures using CDS Views and AMDP — pushing logic down for scale and performance.',
+    tech: ['CDS Views', 'AMDP', 'HANA', 'ABAP'],
+    type: 'Enterprise',
+  },
+  {
+    name: 'Module Pool Applications',
+    description:
+      'Custom SAP transactional screens and enterprise workflows built with Module Pool programming — clean UX over robust backend logic.',
+    tech: ['Module Pool', 'Dynpro', 'ABAP'],
     type: 'Enterprise',
   },
   {
     name: 'SAP Reporting Solutions',
     description:
       'Interactive ALV and enterprise reporting systems — drilldowns, exports, and performance-tuned Open SQL across multiple SAP modules.',
-    tech: ['ALV', 'Classical Reports', 'Open SQL', 'ABAP'],
+    tech: ['ALV', 'Classical Reports', 'Interactive Reports', 'Open SQL'],
     type: 'Enterprise',
   },
   {
-    name: 'CDS & OData Backend Services',
+    name: 'Smart Forms & Adobe Forms Solutions',
     description:
-      'Clean-core SAP backend services built on a CDS / OData backbone — scalable, modular, and aligned with ABAP Cloud principles.',
-    tech: ['CDS Views', 'OData', 'ABAP Cloud'],
+      'Automated enterprise document generation — invoices, purchase orders, and reports with reusable layouts and dynamic data binding.',
+    tech: ['Smart Forms', 'Adobe Forms', 'ABAP'],
     type: 'Enterprise',
   },
   {
-    name: 'SAP Integration Solutions',
+    name: 'SAP Enhancement Framework Solutions',
     description:
-      'Cross-system SAP integrations and backend workflows leveraging RFC, BAPIs, and OData for reliable enterprise data exchange.',
-    tech: ['RFC', 'BAPI', 'OData', 'ABAP'],
+      'Custom business-logic implementations using User Exits, Customer Exits, and BAdIs — extending standard SAP behavior without disturbing the core.',
+    tech: ['User Exits', 'Customer Exits', 'Enhancements', 'ABAP'],
     type: 'Enterprise',
   },
   {

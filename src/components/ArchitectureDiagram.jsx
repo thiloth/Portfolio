@@ -5,7 +5,7 @@ import { Cloud, Cog, Database, FileCode2, Layers, Server } from 'lucide-react';
 const layers = [
   {
     title: 'Presentation',
-    sub: 'SAP GUI · Fiori',
+    sub: 'SAP GUI · Module Pool · Fiori',
     Icon: Layers,
     accent: 'from-cyan-400 to-blue-500',
   },
@@ -16,26 +16,26 @@ const layers = [
     accent: 'from-blue-500 to-indigo-500',
   },
   {
-    title: 'ABAP Cloud Layer',
-    sub: 'RAP · Clean Core',
-    Icon: Cog,
+    title: 'Application Layer',
+    sub: 'Reports · Forms · Enhancements',
+    Icon: FileCode2,
     accent: 'from-indigo-500 to-violet-500',
   },
   {
-    title: 'Custom ABAP',
-    sub: 'Reports · Forms · Exits',
-    Icon: FileCode2,
+    title: 'Business Logic',
+    sub: 'Module Pool · User & Customer Exits',
+    Icon: Cog,
     accent: 'from-violet-500 to-fuchsia-500',
   },
   {
     title: 'Integration Bus',
-    sub: 'RFC · BAPI · OData',
+    sub: 'IDoc · RFC · BAPI · OData',
     Icon: Server,
     accent: 'from-fuchsia-500 to-pink-500',
   },
   {
     title: 'Data Layer',
-    sub: 'Open SQL · HANA',
+    sub: 'CDS Views · AMDP · Open SQL · HANA',
     Icon: Database,
     accent: 'from-pink-500 to-rose-500',
   },

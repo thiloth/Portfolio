@@ -1,50 +1,18 @@
-// Inline SVG logos so we ship zero external image requests.
-// Tweak `size` and `className` (uses Tailwind text-color utilities for SAP).
+// Logo components.
+// IBMLogo uses /public/IBMlogo.png (replace anytime — auto picked up).
+// SAPLogo is an inline SVG so we don't need a network request for it.
 
 export function IBMLogo({ size = 28, className = '' }) {
-  // IBM — 8-bar mark in IBM Blue. Public trademark, used here to denote employer.
-  const w = size * 2.4;
-  const h = size;
+  // PNG aspect ratio is roughly 2.5:1 for the standard IBM 8-bar mark.
   return (
-    <svg
-      role="img"
-      aria-label="IBM"
-      viewBox="0 0 80 32"
-      width={w}
-      height={h}
-      className={className}
-      fill="#0F62FE"
-    >
-      {/* I */}
-      <rect x="2" y="4" width="14" height="2" />
-      <rect x="2" y="8" width="14" height="2" />
-      <rect x="2" y="12" width="14" height="2" />
-      <rect x="2" y="16" width="14" height="2" />
-      <rect x="2" y="20" width="14" height="2" />
-      <rect x="2" y="24" width="14" height="2" />
-      {/* B */}
-      <rect x="20" y="4" width="22" height="2" />
-      <rect x="20" y="8" width="22" height="2" />
-      <rect x="20" y="12" width="4" height="2" />
-      <rect x="38" y="12" width="4" height="2" />
-      <rect x="20" y="16" width="22" height="2" />
-      <rect x="20" y="20" width="22" height="2" />
-      <rect x="20" y="24" width="22" height="2" />
-      {/* M */}
-      <rect x="46" y="4" width="32" height="2" />
-      <rect x="46" y="8" width="32" height="2" />
-      <rect x="46" y="12" width="4" height="2" />
-      <rect x="58" y="12" width="8" height="2" />
-      <rect x="74" y="12" width="4" height="2" />
-      <rect x="46" y="16" width="4" height="2" />
-      <rect x="58" y="16" width="8" height="2" />
-      <rect x="74" y="16" width="4" height="2" />
-      <rect x="46" y="20" width="4" height="2" />
-      <rect x="62" y="20" width="0" height="2" />
-      <rect x="74" y="20" width="4" height="2" />
-      <rect x="46" y="24" width="4" height="2" />
-      <rect x="74" y="24" width="4" height="2" />
-    </svg>
+    <img
+      src="./IBMlogo.png"
+      alt="IBM"
+      height={size}
+      style={{ height: size, width: 'auto' }}
+      className={`inline-block select-none ${className}`}
+      draggable={false}
+    />
   );
 }
 
