@@ -152,7 +152,7 @@ export default function Hero() {
         <div className="lg:col-span-5">
           <div className="grid gap-6">
             <ProfileImage />
-            <div className="hidden md:block">
+            <div className="block">
               <AbapCodeWindow />
             </div>
           </div>

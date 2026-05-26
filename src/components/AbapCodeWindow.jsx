@@ -47,16 +47,20 @@ export default function AbapCodeWindow() {
     >
       <div className="absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-r from-cyan-500/30 via-indigo-500/30 to-fuchsia-500/30 opacity-60 blur-2xl" />
       <div className="overflow-hidden rounded-2xl border border-white/10 bg-ink-900/80 shadow-card backdrop-blur-xl">
-        <div className="flex items-center justify-between border-b border-white/5 bg-white/[0.03] px-4 py-2.5">
-          <div className="flex items-center gap-1.5">
-            <span className="size-3 rounded-full bg-red-400/80" />
-            <span className="size-3 rounded-full bg-yellow-400/80" />
-            <span className="size-3 rounded-full bg-emerald-400/80" />
+        <div className="flex items-center justify-between gap-2 border-b border-white/5 bg-white/[0.03] px-3 py-2 sm:px-4 sm:py-2.5">
+          <div className="flex shrink-0 items-center gap-1.5">
+            <span className="size-2.5 rounded-full bg-red-400/80 sm:size-3" />
+            <span className="size-2.5 rounded-full bg-yellow-400/80 sm:size-3" />
+            <span className="size-2.5 rounded-full bg-emerald-400/80 sm:size-3" />
           </div>
-          <span className="font-mono text-[11px] text-slate-400">solution.abap — IBM · SAP</span>
-          <span className="text-[10px] uppercase tracking-[0.2em] text-slate-500">ABAP Cloud</span>
+          <span className="truncate font-mono text-[10px] text-slate-400 sm:text-[11px]">
+            solution.abap — IBM · SAP
+          </span>
+          <span className="hidden shrink-0 text-[10px] uppercase tracking-[0.2em] text-slate-500 sm:inline">
+            ABAP Cloud
+          </span>
         </div>
-        <div className="grid grid-cols-[36px_1fr] gap-3 p-4 font-mono text-[12.5px] leading-relaxed">
+        <div className="grid grid-cols-[26px_1fr] gap-2 overflow-x-auto p-3 font-mono text-[10.5px] leading-relaxed sm:grid-cols-[36px_1fr] sm:gap-3 sm:p-4 sm:text-[12.5px]">
           <div className="select-none text-right text-slate-600">
             {Array.from({ length: 12 }).map((_, i) => (
               <div key={i}>{i + 1}</div>
