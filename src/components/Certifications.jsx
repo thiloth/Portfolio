@@ -118,7 +118,7 @@ export default function Certifications() {
           eyebrow="Achievements"
           title="Recognized for going above and beyond."
         />
-        <div className="grid grid-cols-2 gap-3 sm:gap-5 md:gap-6">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5 md:gap-6">
           {achievements.map((a, i) => (
             <motion.div
               key={a.title}
@@ -129,20 +129,26 @@ export default function Certifications() {
               className="glass group relative overflow-hidden rounded-2xl p-4 transition hover:-translate-y-1 sm:rounded-3xl sm:p-7"
             >
               <div className="absolute -right-12 -top-12 size-40 rounded-full bg-gradient-to-br from-amber-400/20 to-sky-500/20 blur-2xl transition group-hover:opacity-100" />
-              <div className="flex items-center gap-2 sm:gap-3">
-                <span className="grid size-9 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400/20 to-sky-500/20 ring-1 ring-white/10 sm:size-12 sm:rounded-2xl">
-                  <Award size={14} className="text-amber-300 sm:hidden" />
+              <div className="flex items-start gap-3 sm:items-center">
+                <span className="grid size-11 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-amber-400/20 to-sky-500/20 ring-1 ring-white/10 sm:size-12 sm:rounded-2xl">
+                  <Award size={18} className="text-amber-300 sm:hidden" />
                   <Award size={20} className="hidden text-amber-300 sm:block" />
                 </span>
                 <div className="min-w-0 flex-1">
-                  <div className="flex items-center gap-1.5">
-                    <p className="text-[9px] uppercase tracking-[0.18em] text-amber-300/80 sm:text-[11px] sm:tracking-[0.22em]">{a.metric}</p>
-                    {a.title.toLowerCase().includes('ibm') && <IBMLogo size={12} />}
+                  <div className="flex flex-wrap items-center gap-1.5">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-amber-300/80 sm:text-[11px] sm:tracking-[0.22em]">
+                      {a.metric}
+                    </p>
+                    {a.title.toLowerCase().includes('ibm') && <IBMLogo size={14} />}
                   </div>
-                  <h3 className="font-display text-[13px] font-semibold leading-tight text-white sm:text-lg">{a.title}</h3>
+                  <h3 className="font-display text-base font-semibold leading-tight text-white sm:text-lg">
+                    {a.title}
+                  </h3>
                 </div>
               </div>
-              <p className="mt-3 line-clamp-3 text-[11px] leading-relaxed text-slate-300 sm:mt-4 sm:line-clamp-none sm:text-sm">{a.description}</p>
+              <p className="mt-3 text-xs leading-relaxed text-slate-300 sm:mt-4 sm:text-sm">
+                {a.description}
+              </p>
             </motion.div>
           ))}
         </div>
