@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 // Multi-channel SAP data flow: 3 simultaneous streams (IDoc, OData, RFC)
 // flowing left-to-right with packet animations and per-channel telemetry.
@@ -28,8 +29,10 @@ const channels = [
 ];
 
 export default function DataFlow() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { margin: '0px 0px -10% 0px' });
   return (
-    <div className="glass relative overflow-hidden rounded-3xl p-6 sm:p-8">
+    <div ref={ref} className="glass relative overflow-hidden rounded-3xl p-6 sm:p-8">
       <div className="pointer-events-none absolute -top-32 -right-24 size-72 rounded-full bg-cyan-500/15 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-24 size-72 rounded-full bg-fuchsia-500/15 blur-3xl" />
 
@@ -85,8 +88,8 @@ export default function DataFlow() {
                   className="absolute inset-y-1/2 left-0 right-0 h-px -translate-y-1/2"
                   style={{ background: `linear-gradient(90deg, transparent, ${c.color}55, transparent)` }}
                 />
-                {/* moving packets */}
-                {Array.from({ length: c.packets }).map((_, p) => (
+                {/* moving packets — paused offscreen */}
+                {inView && Array.from({ length: c.packets }).map((_, p) => (
                   <motion.div
                     key={p}
                     className="absolute top-1/2 size-1.5 -translate-y-1/2 rounded-full"
@@ -102,20 +105,22 @@ export default function DataFlow() {
                   />
                 ))}
                 {/* moving longer pulse */}
-                <motion.div
-                  className="absolute top-1/2 h-[2px] w-12 -translate-y-1/2 rounded-full"
-                  style={{
-                    background: `linear-gradient(90deg, transparent, ${c.color}, transparent)`,
-                  }}
-                  initial={{ left: '-15%' }}
-                  animate={{ left: '110%' }}
-                  transition={{
-                    duration: c.speed * 1.6,
-                    delay: i * 0.3,
-                    repeat: Infinity,
-                    ease: 'easeInOut',
-                  }}
-                />
+                {inView && (
+                  <motion.div
+                    className="absolute top-1/2 h-[2px] w-12 -translate-y-1/2 rounded-full"
+                    style={{
+                      background: `linear-gradient(90deg, transparent, ${c.color}, transparent)`,
+                    }}
+                    initial={{ left: '-15%' }}
+                    animate={{ left: '110%' }}
+                    transition={{
+                      duration: c.speed * 1.6,
+                      delay: i * 0.3,
+                      repeat: Infinity,
+                      ease: 'easeInOut',
+                    }}
+                  />
+                )}
               </div>
             </div>
           ))}

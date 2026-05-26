@@ -15,7 +15,7 @@ export default function Hero() {
       <div className="absolute inset-0 -z-10 bg-grid-glow opacity-60" />
       <div className="absolute -left-32 top-24 -z-10 h-72 w-72 rounded-full bg-blue-600/15 blur-[120px]" />
       <div className="absolute -right-32 bottom-24 -z-10 h-80 w-80 rounded-full bg-sky-500/15 blur-[120px]" />
-      <Particles count={18} />
+      <Particles count={12} />
 
       <div className="mx-auto grid w-full max-w-7xl items-center gap-12 px-5 sm:px-8 lg:grid-cols-12">
         <div className="lg:col-span-7">

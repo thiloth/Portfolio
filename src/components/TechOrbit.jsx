@@ -1,4 +1,5 @@
-import { motion } from 'framer-motion';
+import { useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 
 // 3 orbital rings rotating around a central SAP core, each ring carrying
 // a few tech labels. Pure SVG/CSS — no external assets.
@@ -29,8 +30,10 @@ const rings = [
 ];
 
 export default function TechOrbit() {
+  const ref = useRef(null);
+  const inView = useInView(ref, { margin: '0px 0px -10% 0px' });
   return (
-    <div className="glass relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-3xl sm:max-w-none">
+    <div ref={ref} className="glass relative mx-auto aspect-square w-full max-w-[340px] overflow-hidden rounded-3xl sm:max-w-none">
       <div className="absolute inset-0 bg-grid-glow opacity-70" />
       <div className="absolute inset-0 grid-bg opacity-30" />
 
@@ -49,14 +52,14 @@ export default function TechOrbit() {
             />
           ))}
 
-          {/* rings (rotating with items) */}
+          {/* rings (rotating with items) — paused when off-screen */}
           {rings.map((r, i) => (
             <motion.div
               key={`ring-${i}`}
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
               style={{ width: r.radius * 2, height: r.radius * 2 }}
-              animate={{ rotate: r.reverse ? -360 : 360 }}
-              transition={{ duration: r.duration, repeat: Infinity, ease: 'linear' }}
+              animate={inView ? { rotate: r.reverse ? -360 : 360 } : { rotate: 0 }}
+              transition={inView ? { duration: r.duration, repeat: Infinity, ease: 'linear' } : { duration: 0 }}
             >
               {r.items.map((label, j) => {
                 const angle = (j / r.items.length) * Math.PI * 2;
@@ -65,9 +68,8 @@ export default function TechOrbit() {
                 return (
                   <motion.div
                     key={label}
-                    // Counter-rotate so labels stay upright
-                    animate={{ rotate: r.reverse ? 360 : -360 }}
-                    transition={{ duration: r.duration, repeat: Infinity, ease: 'linear' }}
+                    animate={inView ? { rotate: r.reverse ? 360 : -360 } : { rotate: 0 }}
+                    transition={inView ? { duration: r.duration, repeat: Infinity, ease: 'linear' } : { duration: 0 }}
                     className="absolute"
                     style={{ left: x, top: y, transform: 'translate(-50%,-50%)' }}
                   >

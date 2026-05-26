@@ -30,36 +30,6 @@ export const stats = [
   { label: 'Backend Specialist', value: 'ABAP Cloud' },
 ];
 
-// Animated counters for the dedicated Metrics section
-export const metrics = [
-  {
-    label: 'Enterprise SAP Solutions Delivered',
-    value: 20,
-    suffix: '+',
-    accent: 'from-cyan-400 to-indigo-500',
-  },
-  {
-    label: 'SAP Global Certifications',
-    value: 2,
-    suffix: '',
-    accent: 'from-indigo-500 to-fuchsia-500',
-  },
-  {
-    label: 'Months at IBM',
-    // Auto-updates from start date so the number is always current.
-    dynamic: 'monthsAtIBM',
-    suffix: '+',
-    accent: 'from-fuchsia-500 to-pink-500',
-  },
-  {
-    label: 'Backend Domains',
-    value: 8,
-    suffix: '',
-    suffixLabel: 'ABAP · CDS · OData · RFC',
-    accent: 'from-emerald-400 to-teal-500',
-  },
-];
-
 export const skillGroups = [
   {
     title: 'SAP ABAP Expertise',
@@ -310,11 +280,3 @@ export const navLinks = [
   { label: 'Contact', href: '#contact' },
 ];
 
-// Helper used by Metrics — months since startDate (Feb 12, 2024)
-export function monthsAtIBM() {
-  const start = new Date('2024-02-12T00:00:00Z');
-  const now = new Date();
-  const months =
-    (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth());
-  return Math.max(1, months);
-}

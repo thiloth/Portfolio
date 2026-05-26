@@ -27,15 +27,13 @@ export default function LoadingScreen() {
           <motion.div
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: 'easeOut' }}
-            className="relative flex flex-col items-center gap-6"
+            transition={{ duration: 0.5, ease: 'easeOut' }}
+            className="relative flex flex-col items-center gap-5"
           >
             <Wordmark size="lg" />
-
             <p className="font-mono text-[10px] uppercase tracking-[0.4em] text-slate-500">
               SAP ABAP Developer · IBM
             </p>
-
             <div className="relative h-[2px] w-48 overflow-hidden rounded-full bg-white/10">
               <motion.div
                 initial={{ x: '-100%' }}
